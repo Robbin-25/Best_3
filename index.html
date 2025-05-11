@@ -1,1 +1,137 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Websites That Mean Business</title>
+     <link rel="stylesheet" href="output.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .bg-gradient {
+            background: radial-gradient(circle, rgba(128, 0, 255, 0.6), rgba(121, 58, 185, 0.33), rgba(17, 17, 17, 1) 75%);
+        }
+        
+        .text-gradient {
+            background-image: linear-gradient(to right, #B14FFF, #D54FDB);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(to bottom, #B14FFF, #D54FDB);
+        }
+        
+        @keyframes scrollAnimation {
+            0% {
+                top: 0px;
+                opacity: 1;
+            }
+            70% {
+                opacity: 0.8;
+            }
+            100% {
+                top: 42px;
+                opacity: 0.2;
+            }
+        }
+        
+        .scroll-ball {
+            animation: scrollAnimation 1.5s infinite ease-in-out;
+        }
+        
+        ::selection {
+            background-color: #20b946;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 overflow-x-hidden">
+    <section class="relative h-screen w-full">
+      
+        <div class="absolute inset-0 bg-gradient filter blur-xl opacity-90 z-0"></div>
+        
+    
+        <div class="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8">
+            <h2 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-6">
+                <span class="text-gradient">Modern Websites</span> <br class="hidden sm:block"> That Mean Business
+            </h2>
+            
+            <p class="text-white text-lg md:text-xl text-center mb-8 max-w-2xl">
+                We create high-performance websites that look stunning and 
+                <br class="hidden md:block"> work flawlessly across all devices.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30">
+                    Contact Us →
+                </button>
+                <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-purple-500 transition transform hover:-translate-y-0.5 hover:bg-purple-500/10">
+                    Learn About Us
+                </button>
+            </div>
+        </div>
+        
+       
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-5 h-10 rounded-full border-2 border-white flex justify-center z-10 cursor-pointer overflow-hidden">
+            <div class="scroll-ball w-4 h-4 bg-white rounded-full absolute top-2"></div>
+        </div>
+    </section>
+      <section class="py-20 bg-[#111111]">
+    <div class="max-w-7xl mx-auto px-4">
+        <h1 class="text-4xl font-semibold text-center mb-10 text-white relative">
+            Why Our Service is
+            <span class="block w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mt-4"></span>
+        </h1>
+        
+        <div class="flex flex-wrap justify-center gap-10">
+            <!-- Card 1 -->
+            <div class="w-full md:w-96 p-5 rounded-xl border border-gray-600 bg-[#0B0F19] text-white shadow-md transition-transform duration-300 hover:-translate-y-1">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#101C3C] rounded-xl mb-3">
+                    <i class="fa-solid fa-code text-white text-2xl"></i>
+                </div>
+                <h1 class="text-xl font-semibold mt-3 mb-2">Best travel propositions</h1>
+                <p class="text-gray-300 text-base leading-relaxed mb-3">
+                    On your next holiday, don't miss out on these top destinations. We have the best selection of packages. And we have the best prices all the time.
+                </p>
+            </div>
+              
+            <!-- Card 2 -->
+            <div class="w-full md:w-96 p-5 rounded-xl border border-gray-600 bg-[#0B0F19] text-white shadow-md transition-transform duration-300 hover:-translate-y-1">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#101C3C] rounded-xl mb-3">
+                    <i class="fa-brands fa-figma text-white text-2xl"></i>
+                </div>
+                <h1 class="text-xl font-semibold mt-3 mb-2">Luxury accommodations</h1>
+                <p class="text-gray-300 text-base leading-relaxed mb-3">
+                    Experience comfort like never before with our premium accommodations. From boutique hotels to luxury resorts, we offer the best places to stay.
+                </p>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="w-full md:w-96 p-5 rounded-xl border border-gray-600 bg-[#0B0F19] text-white shadow-md transition-transform duration-300 hover:-translate-y-1">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#101C3C] rounded-xl mb-3">
+                    <i class="fa-solid fa-mobile-screen text-white text-2xl"></i>
+                </div>
+                <h1 class="text-xl font-semibold mt-3 mb-2">Mobile-friendly booking</h1>
+                <p class="text-gray-300 text-base leading-relaxed mb-3">
+                    Book your dream vacation anytime, anywhere with our mobile-friendly platform. Quick, easy, and secure booking right at your fingertips.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+        document.querySelector('.scroll-ball').parentElement.addEventListener('click', function() {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
