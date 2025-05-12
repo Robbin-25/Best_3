@@ -8,6 +8,75 @@
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    
+<!-- Footer -->
+   <style>
+    .nav-li {
+      transform: translateX(0);
+      opacity: 1;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    .scrolled .nav-li {
+      opacity: 0;
+    }
+
+    .scrolled .nav-li.animated {
+      opacity: 1;
+      transform: translateX(calc(-47vw + 24rem + var(--offset)));
+    }
+  </style>
+  <nav id="navbar" class="fixed top-0 left-0 w-[94%] mx-[3%] mt-5 px-6 py-3 rounded-2xl flex justify-between items-center z-[1000] transition-colors duration-500">
+    <div class="flex items-center gap-2">
+      <img src="https://img.icons8.com/ios-filled/50/26e07f/plant-under-sun.png" alt="Logo" class="h-6">
+      <span class="text-green-400 text-sm font-medium">Web-Plants</span>
+    </div>
+    <ul id="nav-links" class="flex items-center gap-8">
+      <li class="nav-li" style="--offset: -90px;">
+        <a href="#" class="text-black text-base font-semibold hover:text-green-500 transition-colors">Home</a>
+      </li>
+      <li class="nav-li" style="--offset: -30px;">
+        <a href="#" class="text-black text-base font-semibold hover:text-green-500 transition-colors">About</a>
+      </li>
+      <li class="nav-li" style="--offset: 30px;">
+        <a href="#" class="text-black text-base font-semibold hover:text-green-500 transition-colors">Services</a>
+      </li>
+      <li class="nav-li" style="--offset: 90px;">
+        <a href="#" class="text-black text-base font-semibold hover:text-green-500 transition-colors">Features</a>
+      </li>
+      <li>
+        <a href="#" class="bg-green-600 text-white text-base font-semibold px-3 py-1 rounded-lg hover:bg-green-700 transition-colors">
+          Features
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <script>
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('#nav-links li');
+    let animated = false;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200 && !animated) {
+        navbar.classList.add('scrolled');
+
+        navLinks.forEach((li, index) => {
+          setTimeout(() => {
+            li.classList.add('animated');
+          }, index * 150);
+        });
+
+        animated = true;
+      } else if (window.scrollY <= 200 && animated) {
+        navbar.classList.remove('scrolled');
+
+        navLinks.forEach(li => li.classList.remove('animated'));
+
+        animated = false;
+      }
+    });
+  </script>
+    
     <style>
         * {
             font-family: 'Poppins', sans-serif;
