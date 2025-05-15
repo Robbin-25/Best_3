@@ -10,12 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
-}
+
 .nav-links.active {
     height: auto; /* Erlaubt, dass der Inhalt sich entfaltet */
     opacity: 1;
@@ -94,57 +89,6 @@
     </div>
   </nav>
 
-  <!-- Dummy content to enable scrolling -->
-  <div class="h-[2000px] pt-40 px-4">
-    <p class="text-blue-300">Scroll nach unten, um die Navbar zu verändern.</p>
-  </div>
-
-  <script>
-    const navbar = document.getElementById('navbar');
-    const navLinks = document.querySelector('.nav-links');
-    
-    function toggleMenu() {
-      document.querySelector(".nav-links").classList.toggle("active");
-      document.querySelector(".nav-hamburger").classList.toggle("active");
-    }
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        navbar.classList.add(
-          'w-[80vw]',
-          'mt-4',
-          'mx-[10vw]',
-          'rounded-2xl',
-          'py-2',
-          'px-4',
-          'shadow-lg',
-          'md:bg-gray-800'
-        );
-        navbar.classList.remove('w-full', 'px-8', 'py-4', 'md:bg-transparent');
-        navLinks.classList.add(
-          'md:bg-gray-800',
-        );
-        navLinks.classList.remove('md:bg-transparent');
-      } else {
-        navbar.classList.remove(
-          'w-[80vw]',
-          'mt-4',
-          'mx-[10vw]',
-          'rounded-2xl',
-          'py-2',
-          'px-4',
-          'shadow-lg',
-          'md:bg-gray-800'
-        );
-        navbar.classList.add('w-full', 'px-8', 'py-4', 'md:bg-transparent');
-        navLinks.classList.remove(
-          'md:bg-gray-800',
-        );
-        navLinks.classList.add('md:bg-transparent');
-      }
-    });
-  </script>
-    
     <section class="relative h-screen w-full">
       
         <div class="absolute inset-0 bg-gradient filter blur-xl opacity-90 z-0"></div>
@@ -290,6 +234,50 @@
   </footer>
 
     <script>
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelector('.nav-links');
+    
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("active");
+      document.querySelector(".nav-hamburger").classList.toggle("active");
+    }
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add(
+          'w-[80vw]',
+          'mt-4',
+          'mx-[10vw]',
+          'rounded-2xl',
+          'py-2',
+          'px-4',
+          'shadow-lg',
+          'md:bg-gray-800'
+        );
+        navbar.classList.remove('w-full', 'px-8', 'py-4', 'md:bg-transparent');
+        navLinks.classList.add(
+          'md:bg-gray-800',
+        );
+        navLinks.classList.remove('md:bg-transparent');
+      } else {
+        navbar.classList.remove(
+          'w-[80vw]',
+          'mt-4',
+          'mx-[10vw]',
+          'rounded-2xl',
+          'py-2',
+          'px-4',
+          'shadow-lg',
+          'md:bg-gray-800'
+        );
+        navbar.classList.add('w-full', 'px-8', 'py-4', 'md:bg-transparent');
+        navLinks.classList.remove(
+          'md:bg-gray-800',
+        );
+        navLinks.classList.add('md:bg-transparent');
+      }
+    });
+    
         document.querySelector('.scroll-ball').parentElement.addEventListener('click', function() {
             window.scrollTo({
                 top: window.innerHeight,
