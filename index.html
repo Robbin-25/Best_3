@@ -8,79 +8,29 @@
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
-    
-<!-- Navbar -->
-   <style>
-    .nav-li {
-      transform: translateX(0);
-      opacity: 1;
-      transition: transform 0.6s ease, opacity 0.6s ease;
-    }
-
-    .scrolled .nav-li {
-      opacity: 0;
-    }
-
-    .scrolled .nav-li.animated {
-      opacity: 1;
-      transform: translateX(calc(-47vw + 24rem + var(--offset)));
-    }
-  </style>
-  <nav id="navbar" class="fixed top-0 left-0 w-[94%] mx-[3%] mt-5 px-6 py-3 rounded-2xl flex justify-between items-center z-[1000] transition-colors duration-500">
-    <div class="flex items-center gap-2">
-      <img src="https://img.icons8.com/ios-filled/50/26e07f/plant-under-sun.png" alt="Logo" class="h-6">
-      <span class="text-green-400 text-sm font-medium">Web-Plants</span>
-    </div>
-    <ul id="nav-links" class="flex items-center gap-8">
-      <li class="nav-li" style="--offset: -90px;">
-        <a href="#" class="text-black text-base font-semibold hover:text-green-500 transition-colors">Home</a>
-      </li>
-      <li class="nav-li" style="--offset: -30px;">
-        <a href="#" class="text-black text-base font-semibold hover:text-green-500 transition-colors">About</a>
-      </li>
-      <li class="nav-li" style="--offset: 30px;">
-        <a href="#" class="text-black text-base font-semibold hover:text-green-500 transition-colors">Services</a>
-      </li>
-      <li class="nav-li" style="--offset: 90px;">
-        <a href="#" class="text-black text-base font-semibold hover:text-green-500 transition-colors">Features</a>
-      </li>
-      <li>
-        <a href="#" class="bg-green-600 text-white text-base font-semibold px-3 py-1 rounded-lg hover:bg-green-700 transition-colors">
-          Features
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <script>
-    const navbar = document.getElementById('navbar');
-    const navLinks = document.querySelectorAll('#nav-links li');
-    let animated = false;
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200 && !animated) {
-        navbar.classList.add('scrolled');
-
-        navLinks.forEach((li, index) => {
-          setTimeout(() => {
-            li.classList.add('animated');
-          }, index * 150);
-        });
-
-        animated = true;
-      } else if (window.scrollY <= 200 && animated) {
-        navbar.classList.remove('scrolled');
-
-        navLinks.forEach(li => li.classList.remove('animated'));
-
-        animated = false;
-      }
-    });
-  </script>
-    
     <style>
-        * {
-            font-family: 'Poppins', sans-serif;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+.nav-links.active {
+    height: auto; /* Erlaubt, dass der Inhalt sich entfaltet */
+    opacity: 1;
+    visibility: visible;
+    padding: 35px 0 20px 0;
+}
+.nav-hamburger.active .nav-bar:nth-child(1) {
+    transform: translateY(11px) rotate(-135deg);
+}
+.nav-hamburger.active .nav-bar:nth-child(2) {
+    opacity: 0;
+}
+.nav-hamburger.active .nav-bar:nth-child(3) {
+    transform: translateY(-11px) rotate(135deg);
+}
         
         .bg-gradient {
             background: radial-gradient(circle, rgba(128, 0, 255, 0.6), rgba(121, 58, 185, 0.33), rgba(17, 17, 17, 1) 75%);
@@ -122,6 +72,79 @@
     </style>
 </head>
 <body class="bg-gray-900 overflow-x-hidden">
+    
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 md:bg-transparent z-1000 flex items-center justify-between px-8 py-4 shadow transition-all duration-500">
+
+    <div class="text-xl z-[1000] font-bold text-green-600">Logo</div>
+
+    <ul class="nav-links flex md:opacity-100 md:visible md:flex-row md:w-auto md:relative md:top-0 md:left-auto opacity-0 invisible flex-col w-full absolute top-[22.5px] left-0 bg-gray-800 md:bg-transparent rounded-b-2xl md:p-0 z-500 gap-x-[35px] gap-y-[5px] text-white text-lg font-medium transition-all duration-500">
+      <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Home</a></li>
+      <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Über</a></li>
+      <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Leistungen</a></li>
+      <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Kontakt</a></li>
+    </ul>
+
+    <button class="hidden md:block text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded-xl transition">Button</button>
+
+    <div class="nav-hamburger md:hidden flex flex-col cursor-pointer w-[32px] h-[25px] justify-between transition-all duration-300 z-1000" onclick="toggleMenu()">
+      <div class="nav-bar bg-white w-[32px] h-[3px] transition-all duration-300 rounded-[1px]"></div>
+      <div class="nav-bar bg-white w-[32px] h-[3px] transition-all duration-300 rounded-[1px]"></div>
+      <div class="nav-bar bg-white w-[32px] h-[3px] transition-all duration-300 rounded-[1px]"></div>
+    </div>
+  </nav>
+
+  <!-- Dummy content to enable scrolling -->
+  <div class="h-[2000px] pt-40 px-4">
+    <p class="text-blue-300">Scroll nach unten, um die Navbar zu verändern.</p>
+  </div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelector('.nav-links');
+    
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("active");
+      document.querySelector(".nav-hamburger").classList.toggle("active");
+    }
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add(
+          'w-[80vw]',
+          'mt-4',
+          'mx-[10vw]',
+          'rounded-2xl',
+          'py-2',
+          'px-4',
+          'shadow-lg',
+          'md:bg-gray-800'
+        );
+        navbar.classList.remove('w-full', 'px-8', 'py-4', 'md:bg-transparent');
+        navLinks.classList.add(
+          'md:bg-gray-800',
+        );
+        navLinks.classList.remove('md:bg-transparent');
+      } else {
+        navbar.classList.remove(
+          'w-[80vw]',
+          'mt-4',
+          'mx-[10vw]',
+          'rounded-2xl',
+          'py-2',
+          'px-4',
+          'shadow-lg',
+          'md:bg-gray-800'
+        );
+        navbar.classList.add('w-full', 'px-8', 'py-4', 'md:bg-transparent');
+        navLinks.classList.remove(
+          'md:bg-gray-800',
+        );
+        navLinks.classList.add('md:bg-transparent');
+      }
+    });
+  </script>
+    
     <section class="relative h-screen w-full">
       
         <div class="absolute inset-0 bg-gradient filter blur-xl opacity-90 z-0"></div>
