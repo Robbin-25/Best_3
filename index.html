@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-Plants</title>
-     <link rel="stylesheet" href="output.css">
+     <link rel="stylesheet" href="../dist/output.css">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
-    <style>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+    /* Body */
+::selection {
+    background-color: #20b946;
+    color: white;
+}
+
+    /* Navbar */
 .nav-links.active {
-    height: auto; /* Erlaubt, dass der Inhalt sich entfaltet */
+    height: auto;
     opacity: 1;
     visibility: visible;
     padding: 35px 0 20px 0;
@@ -26,50 +33,44 @@
 .nav-hamburger.active .nav-bar:nth-child(3) {
     transform: translateY(-11px) rotate(135deg);
 }
-        
-        .bg-gradient {
-            background: radial-gradient(circle, rgba(128, 0, 255, 0.6), rgba(121, 58, 185, 0.33), rgba(17, 17, 17, 1) 75%);
-        }
-        
-        .text-gradient {
-            background-image: linear-gradient(to right, #B14FFF, #D54FDB);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .btn-gradient {
-            background: linear-gradient(to bottom, #B14FFF, #D54FDB);
-        }
-        
-        @keyframes scrollAnimation {
-            0% {
-                top: 0px;
-                opacity: 1;
-            }
-            70% {
-                opacity: 0.8;
-            }
-            100% {
-                top: 42px;
-                opacity: 0.2;
-            }
-        }
-        
-        .scroll-ball {
-            animation: scrollAnimation 1.5s infinite ease-in-out;
-        }
-        
-        ::selection {
-            background-color: #20b946;
-            color: white;
-        }
-    </style>
+
+    /* Hero */        
+.bg-gradient {
+    background: radial-gradient(circle, rgba(128, 0, 255, 0.6), rgba(121, 58, 185, 0.33), rgba(17, 17, 17, 1) 75%);
+}   
+.text-gradient {
+    background-image: linear-gradient(to right, #B14FFF, #D54FDB);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}     
+.btn-gradient {
+    background: linear-gradient(to bottom, #B14FFF, #D54FDB);
+}    
+@keyframes scrollAnimation {
+    0% {
+        top: 0px;
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.8;
+    }
+    100% {
+        top: 42px;
+        opacity: 0.2;
+    }
+}
+.scroll-ball {
+    animation: scrollAnimation 1.5s infinite ease-in-out;
+}
+
+</style>
 </head>
-<body class="bg-gray-900 overflow-x-hidden">
+
+<body class="bg-gray-900 overflow-x-hidden box-border">
     
-  <!-- Navbar -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 md:bg-transparent z-1000 flex items-center justify-between px-8 py-4 shadow transition-all duration-500">
+    <!-- Navbar -->
+<nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 md:bg-transparent z-1000 flex items-center justify-between px-8 py-4 shadow transition-all duration-500">
 
     <div class="text-xl z-[1000] font-bold text-green-600">Logo</div>
 
@@ -87,80 +88,92 @@
       <div class="nav-bar bg-white w-[32px] h-[3px] transition-all duration-300 rounded-[1px]"></div>
       <div class="nav-bar bg-white w-[32px] h-[3px] transition-all duration-300 rounded-[1px]"></div>
     </div>
-  </nav>
+</nav>
 
-    <section class="relative h-screen w-full">
+    <!-- Hero -->
+<section class="relative h-screen w-full">
       
-        <div class="absolute inset-0 bg-gradient filter blur-xl opacity-90 z-0"></div>
-        
+    <div class="absolute inset-0 bg-gradient filter blur-xl opacity-90 z-0"></div>
     
-        <div class="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8">
-            <h2 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-6">
-                <span class="text-gradient">Modern Websites</span> <br class="hidden sm:block"> That Mean Business
-            </h2>
+    <div class="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8">
+        <h2 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-6">
+            <span class="text-gradient">Modern Websites</span> <br class="hidden sm:block"> That Mean Business
+        </h2>
             
-            <p class="text-white text-lg md:text-xl text-center mb-8 max-w-2xl">
-                We create high-performance websites that look stunning and 
-                <br class="hidden md:block"> work flawlessly across all devices.
-            </p>
+        <p class="text-white text-lg md:text-xl text-center mb-8 max-w-2xl">
+            We create high-performance websites that look stunning and 
+            <br class="hidden md:block"> work flawlessly across all devices.
+        </p>
             
-            <div class="flex flex-row sm:flex-crow gap-4 mb-8">
-                <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30">
-                    Contact Us →
-                </button>
-                <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-purple-500 transition transform hover:-translate-y-0.5 hover:bg-purple-500/10">
-                    Learn About Us
-                </button>
-            </div>
+        <div class="flex flex-row sm:flex-crow gap-4 mb-8">
+            <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30">
+                Contact Us →
+            </button>
+            <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-purple-500 transition transform hover:-translate-y-0.5 hover:bg-purple-500/10">
+                Learn About Us
+            </button>
         </div>
-        
-       
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-5 h-10 rounded-full border-2 border-white flex justify-center z-10 cursor-pointer overflow-hidden">
-            <div class="scroll-ball w-4 h-4 bg-white rounded-full absolute top-2"></div>
-        </div>
-    </section>
-    <section class="py-20 bg-[#111111]">
-     <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center">
+    </div>
+         
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-5 h-10 rounded-full border-2 border-white flex justify-center z-10 cursor-pointer overflow-hidden">
+        <div class="scroll-ball w-4 h-4 bg-white rounded-full absolute top-2"></div>
+    </div>
+</section>
+
+    <!-- Team -->
+<section class="py-20 bg-[#111111]">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center">
         <h1 class="text-4xl font-semibold text-center mb-2 text-white relative">
             Our team of <span class="text-gradient">experts</span> are here to help
         </h1>
+
         <p class="text-[14px] text-center text-gray-200 relative mb-10">Get support 24/7, with our award-winning support network of growth experts.</p>
-         <div class="flex flex-row sm:flex-row gap-5 mb-8 max-w-4xl mx-auto">
-                <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30">
-                    Contact Us →
-                </button>
-                <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-purple-500 transition transform hover:-translate-y-0.5 hover:bg-purple-500/10">
-                    Learn About Us
-                </button>
-            </div>
-         <div class=" w-full flex flex-wrap justify-center gap-9 max-w-4xl mx-auto pr-0">
-        <div class=" w-96 sm:w-96 p-5 rounded-xl border border-gray-600 bg-[#0B0F19] text-white shadow-md transition-transform duration-300 hover:-translate-y-1 relative overflow-hidden group h-110 cursor-pointer ">
-            <div class="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-300 "
-                 style="background-image: url('bl6.jpg'); z-index: 0;"></div>
-            <div class="flex flex-col justify-between h-full relative z-10">
-                <div class="bg-gray-800 rounded-lg p-4 mx-2 mb-1 absolute bottom-0 left-0 right-0 border-gray-600 border">
-                    <h1 class="text-xl font-semibold mb-2">Joel Hermann</h1>
-                    <p class="text-gray-300 text-base leading-relaxed">
-                        Front-end and Designer
-                    </p>
+
+        <div class="flex flex-row sm:flex-row gap-5 mb-8 max-w-4xl mx-auto">
+            <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30">
+                Contact Us →
+            </button>
+            <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-purple-500 transition transform hover:-translate-y-0.5 hover:bg-purple-500/10">
+                Learn About Us
+            </button>
+        </div>
+
+        <div class=" w-full flex flex-wrap justify-center gap-9 max-w-4xl mx-auto pr-0">
+            <div class=" w-96 sm:w-96 p-5 rounded-xl border border-gray-600 bg-[#0B0F19] text-white shadow-md transition-transform duration-300 hover:-translate-y-1 relative overflow-hidden group h-110 cursor-pointer ">
+                <div class="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-300 "
+                    style="background-image: url('bl6.jpg'); z-index: 0;">
+                </div>
+
+                <div class="flex flex-col justify-between h-full relative z-10">
+                    <div class="bg-gray-800 rounded-lg p-4 mx-2 mb-1 absolute bottom-0 left-0 right-0 border-gray-600 border">
+                        <h1 class="text-xl font-semibold mb-2">Joel Hermann</h1>
+                        <p class="text-gray-300 text-base leading-relaxed">
+                            Front-end and Designer
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="w-96 md:w-96 p-5 rounded-xl border border-gray-600 bg-[#0B0F19] text-white shadow-md transition-transform duration-300 hover:-translate-y-1 relative overflow-hidden group h-110 cursor-pointer sm:w-96 ">
-            <div class="inline-flex items-center absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-300"
-                 style="background-image: url('bl5.jpg'); z-index: 0;"></div>
-            <div class="flex flex-col justify-between h-full relative z-10">
-                <div class="bg-gray-800 rounded-lg p-4 mx-2 mb-1 absolute bottom-0 left-0 right-0 border-gray-600 border">
-                    <h1 class="text-xl font-semibold mb-2">Die Ongelika</h1>
-                    <p class="text-gray-300 text-base leading-relaxed">
-                        Front-end and Backend
-                    </p>
+
+            <div class="w-96 md:w-96 p-5 rounded-xl border border-gray-600 bg-[#0B0F19] text-white shadow-md transition-transform duration-300 hover:-translate-y-1 relative overflow-hidden group h-110 cursor-pointer sm:w-96 ">
+                <div class="inline-flex items-center absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-300"
+                    style="background-image: url('bl5.jpg'); z-index: 0;">
+                </div>
+
+                <div class="flex flex-col justify-between h-full relative z-10">
+                    <div class="bg-gray-800 rounded-lg p-4 mx-2 mb-1 absolute bottom-0 left-0 right-0 border-gray-600 border">
+                        <h1 class="text-xl font-semibold mb-2">Die Ongelika</h1>
+                        <p class="text-gray-300 text-base leading-relaxed">
+                            Front-end and Backend
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-   </section>
-      <section class="py-20 bg-[#111111]">
+</section>
+
+    <!-- Service -->
+<section class="py-20 bg-[#111111]">
     <div class="max-w-7xl mx-auto px-4">
         <h1 class="text-4xl font-semibold text-center mb-10 text-white relative">
             Why Our Service is
@@ -203,8 +216,9 @@
         </div>
     </div>
 </section>
-<!-- Footer -->
-  <footer class="bg-[#1f1f1f] text-white px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12 lg:px-10 lg:py-16 xl:px-12 xl:py-20 2xl:px-16 2xl:py-24 grid gap-8 sm:gap-10 md:gap-12 lg:gap-14 justify-items-center text-center">
+
+    <!-- Footer -->
+<footer class="bg-[#1f1f1f] text-white px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12 lg:px-10 lg:py-16 xl:px-12 xl:py-20 2xl:px-16 2xl:py-24 grid gap-8 sm:gap-10 md:gap-12 lg:gap-14 justify-items-center text-center">
 
     <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
       <a href="#" class="bg-[#090E1B] w-14 h-14 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-18 lg:h-18 flex items-center justify-center rounded-lg sm:rounded-xl text-lg sm:text-xl md:text-2xl lg:text-3xl border border-[#575757] transition-transform duration-300 hover:scale-110">
@@ -220,20 +234,24 @@
         <i class="fab fa-tiktok"></i>
       </a>
     </div>
+
     <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 text-sm sm:text-base md:text-lg lg:text-xl">
       <a href="#" class="hover:text-[#bb86fc]">News</a>
       <a href="#" class="hover:text-[#bb86fc]">Our Team</a>
       <a href="#" class="hover:text-[#bb86fc]">Contact Us</a>
       <a href="#" class="hover:text-[#bb86fc]">About</a>
     </div>
+
     <hr class="w-4/5 border border-[#ccc]" />
+
     <p class="text-xs sm:text-sm md:text-base lg:text-lg text-[#ccc]">
       Copyright ©2025: Designed by 
       <a href="#" class="text-[#bb86fc] hover:underline">Company</a>
     </p>
-  </footer>
+</footer>
 
-    <script>
+<script> 
+    // Navbar
     const navbar = document.getElementById('navbar');
     const navLinks = document.querySelector('.nav-links');
     
@@ -277,13 +295,15 @@
         navLinks.classList.add('md:bg-transparent');
       }
     });
-    
-        document.querySelector('.scroll-ball').parentElement.addEventListener('click', function() {
-            window.scrollTo({
-                top: window.innerHeight,
-                behavior: 'smooth'
-            });
+
+    // Hero
+    document.querySelector('.scroll-ball').parentElement.addEventListener('click', function() {
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: 'smooth'
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
