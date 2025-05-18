@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-Plants</title>
-     <link rel="stylesheet" href="output.css">
+     <link rel="stylesheet" href="../dist/output.css">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
@@ -22,7 +22,7 @@
     height: auto;
     opacity: 1;
     visibility: visible;
-    padding: 35px 0 20px 0;
+    padding: 40px 0 20px 0;
 }
 .nav-hamburger.active .nav-bar:nth-child(1) {
     transform: translateY(11px) rotate(-135deg);
@@ -64,15 +64,27 @@
     animation: scrollAnimation 1.5s infinite ease-in-out;
 }
 
+    /* Faq */
+.faq-active .faq-answer {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 0.5rem;
+}
+.faq-active .line1 {
+    transform: rotate(90deg) translateX(-4px) translateY(-4px) scaleX(1.3);
+}
+.faq-active .line2 {
+    transform: rotate(-90deg) translateX(4px) translateY(-4px) scaleX(1.3);
+}
 </style>
 </head>
 
-<body class="bg-gray-900 overflow-x-hidden box-border">
+<body class="bg-gray-900 text-white overflow-x-hidden box-border">
     
     <!-- Navbar -->
 <nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 md:bg-transparent z-1000 flex items-center justify-between px-8 py-4 shadow transition-all duration-500">
 
-    <div class="text-xl z-[1000] font-bold text-green-600">Logo</div>
+    <div class="z-[1000]"><img class="h-9 mb-1 w-auto" src="Slice_13-removebg-preview (1).png" alt=""></div>
 
     <ul class="nav-links flex md:opacity-100 md:visible md:flex-row md:w-auto md:relative md:top-0 md:left-auto opacity-0 invisible flex-col w-full absolute top-[22.5px] left-0 bg-gray-800 md:bg-transparent rounded-b-2xl md:p-0 z-500 gap-x-[35px] gap-y-[5px] text-white text-lg font-medium transition-all duration-500">
       <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Home</a></li>
@@ -172,6 +184,60 @@
     </div>
 </section>
 
+    <!-- Faq -->
+<section class="flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0 py-24 max-w-6xl mx-auto">
+        <div class="w-full lg:w-4/5">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
+                The Question we get <span class="text-[#BCBD8B]">asked</span>
+            </h1>
+            <p class="text-base sm:text-lg mb-8 text-center">Serhat ist ein komischer</p>
+
+            <div class="bg-[#090E1B] rounded-xl border border-gray-600 shadow-md p-6 lg:p-8 px-6 space-y-4">
+                <!-- FAQ Item -->
+                <div class="border-b border-gray-700 pb-3">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(this)">
+                        <h2 class="text-lg sm:text-xl font-medium">Was ist diese Website?</h2>
+                        <div class="relative w-5 h-5 pr-7">
+                            <div class="line1 absolute w-4 h-0.5 bg-white rounded transition-transform duration-300 rotate-45 -translate-x-[5.5px]"></div>
+                            <div class="line2 absolute w-4 h-0.5 bg-white rounded transition-transform duration-300 -rotate-45 translate-x-[5.5px]"></div>
+                        </div>
+                    </div>
+                    <div class="faq-answer ml-1 max-h-0 overflow-hidden opacity-0 text-sm sm:text-base text-gray-300 transition-all duration-500">
+                        Diese Website bietet hilfreiche Informationen zu verschiedenen Themen.
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="border-b border-gray-700 pb-3">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(this)">
+                        <h2 class="text-lg sm:text-xl font-medium">Wie kann ich Kontakt aufnehmen?</h2>
+                        <div class="relative w-5 h-5 pr-7">
+                            <div class="line1 absolute w-4 h-0.5 bg-white rounded transition-transform duration-300 rotate-45 -translate-x-[5.5px]"></div>
+                            <div class="line2 absolute w-4 h-0.5 bg-white rounded transition-transform duration-300 -rotate-45 translate-x-[5.5px]"></div>
+                        </div>
+                    </div>
+                    <div class="faq-answer ml-1 max-h-0 overflow-hidden opacity-0 text-sm sm:text-base text-gray-300 transition-all duration-500">
+                        Du kannst uns per E-Mail oder über unser Kontaktformular erreichen.
+                    </div>
+                </div>
+
+                <!-- Serhat -->
+                <div class="border-b border-gray-700 pb-3">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(this)">
+                        <h2 class="text-lg sm:text-xl font-medium">Wie kann ich Serhat schlagen?</h2>
+                        <div class="relative w-5 h-5 pr-7">
+                            <div class="line1 absolute w-4 h-0.5 bg-white rounded transition-transform duration-300 rotate-45 -translate-x-[5.5px]"></div>
+                            <div class="line2 absolute w-4 h-0.5 bg-white rounded transition-transform duration-300 -rotate-45 translate-x-[5.5px]"></div>
+                        </div>
+                    </div>
+                    <div class="faq-answer ml-1 max-h-0 overflow-hidden opacity-0 text-sm sm:text-base text-gray-300 transition-all duration-500">
+                        Du kannst Serhat schlagen indem du mit 4facher Schallgeschwindigkeit zuschlägst.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Service -->
 <section class="py-20 bg-[#111111]">
     <div class="max-w-7xl mx-auto px-4">
@@ -218,19 +284,19 @@
 </section>
 
     <!-- Footer -->
-<footer class="bg-[#1f1f1f] text-white px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12 lg:px-10 lg:py-16 xl:px-12 xl:py-20 2xl:px-16 2xl:py-24 grid gap-8 sm:gap-10 md:gap-12 lg:gap-14 justify-items-center text-center">
+<footer class="bg-[#1f1f1f] text-white px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-16 2xl:py-16 grid gap-8 justify-items-center text-center">
 
     <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
-      <a href="#" class="bg-[#090E1B] w-14 h-14 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-18 lg:h-18 flex items-center justify-center rounded-lg sm:rounded-xl text-lg sm:text-xl md:text-2xl lg:text-3xl border border-[#575757] transition-transform duration-300 hover:scale-110">
+      <a href="#" class="bg-[#090E1B] w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-lg sm:rounded-xl text-lg sm:text-xl md:text-2xl lg:text-3xl border border-[#575757] transition-transform duration-300 hover:scale-110">
         <i class="fab fa-github"></i>
       </a>
-      <a href="#" class="bg-[#090E1B] w-14 h-14 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-18 lg:h-18 flex items-center justify-center rounded-lg sm:rounded-xl text-lg sm:text-xl md:text-2xl lg:text-3xl border border-[#575757] transition-transform duration-300 hover:scale-110">
+      <a href="#" class="bg-[#090E1B] w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-lg sm:rounded-xl text-lg sm:text-xl md:text-2xl lg:text-3xl border border-[#575757] transition-transform duration-300 hover:scale-110">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="#" class="bg-[#090E1B] w-14 h-14 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-18 lg:h-18 flex items-center justify-center rounded-lg sm:rounded-xl text-lg sm:text-xl md:text-2xl lg:text-3xl border border-[#575757] transition-transform duration-300 hover:scale-110">
+      <a href="#" class="bg-[#090E1B] w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-lg sm:rounded-xl text-lg sm:text-xl md:text-2xl lg:text-3xl border border-[#575757] transition-transform duration-300 hover:scale-110">
         <i class="fas fa-envelope"></i>
       </a>
-      <a href="#" class="bg-[#090E1B] w-14 h-14 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-18 lg:h-18 flex items-center justify-center rounded-lg sm:rounded-xl text-lg sm:text-xl md:text-2xl lg:text-3xl border border-[#575757] transition-transform duration-300 hover:scale-110">
+      <a href="#" class="bg-[#090E1B] w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-lg sm:rounded-xl text-lg sm:text-xl md:text-2xl lg:text-3xl border border-[#575757] transition-transform duration-300 hover:scale-110">
         <i class="fab fa-tiktok"></i>
       </a>
     </div>
@@ -242,7 +308,7 @@
       <a href="#" class="hover:text-[#bb86fc]">About</a>
     </div>
 
-    <hr class="w-4/5 border border-[#ccc]" />
+    <hr class="w-11/12 border border-[#ccc]" />
 
     <p class="text-xs sm:text-sm md:text-base lg:text-lg text-[#ccc]">
       Copyright ©2025: Designed by 
@@ -303,6 +369,12 @@
             behavior: 'smooth'
         });
     });
+
+    // Faq  
+    function toggleFAQ(element) {
+        const faqItem = element.parentElement;
+        faqItem.classList.toggle("faq-active");
+    }
 </script>
 
 </body>
