@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-Plants</title>
-     <link rel="stylesheet" href="output.css">
+     <link rel="stylesheet" href="../dist/output.css">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
@@ -75,6 +75,29 @@
 }
 .faq-active .line2 {
     transform: rotate(-90deg) translateX(4px) translateY(-4px) scaleX(1.3);
+}
+
+    /* Timeline */
+.timeline-line::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 0%;
+    background-color: #9333ea;
+    transform: translateX(-50%);
+    transition: height 0.2s ease-out;
+    z-index: 0;
+}
+.timeline-step {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.timeline-step.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 </style>
 </head>
@@ -283,6 +306,74 @@
     </div>
 </section>
 
+    <!-- Timeline -->
+    <section id="timeline" class="py-20 pb-80 px-4">
+      <h2 class="text-center text-4xl font-bold mb-20">Our Journey</h2>
+
+      <div class="relative max-w-5xl mx-auto timeline-line" id="timelineLineContainer">
+        <div id="timelineLine" class="absolute left-1/2 top-0 w-1 bg-purple-600 z-0" style="transform: translateX(-50%); height: 0;"></div>
+
+        <div class="space-y-32">
+          <!-- Step Template -->
+          <div class="timeline-step flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 md:pr-8 text-right">
+              <div class="text-3xl text-purple-400 mb-2">2023</div>
+              <div class="font-bold text-xl">Started Web Dev</div>
+              <p class="text-gray-400 mt-2">
+                With over 5 years of experience in web development, I specialize in creating beautiful
+              </p>
+            </div>
+            <div class="bg-purple-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="md:w-1/2 hidden md:block"></div>
+          </div>
+
+          <div class="timeline-step flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 hidden md:block"></div>
+            <div class="bg-purple-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
+              <i class="fas fa-user-friends"></i>
+            </div>
+            <div class="md:w-1/2 md:pl-8 text-left">
+              <div class="text-3xl text-purple-400 mb-2">2024</div>
+              <div class="font-bold text-xl">Coding buddy</div>
+              <p class="text-gray-400 mt-2">
+                My Partner started to code and learned it pretty fast, because he likes Serhat so much
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 md:pr-8 text-right">
+              <div class="text-3xl text-purple-400 mb-2">2025</div>
+              <div class="font-bold text-xl">Starting to Work</div>
+              <p class="text-gray-400 mt-2">
+                With over 5 years of experience in web development, I specialize in creating beautiful
+              </p>
+            </div>
+            <div class="bg-purple-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="md:w-1/2 hidden md:block"></div>
+          </div>
+
+          <div class="timeline-step flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 hidden md:block"></div>
+            <div class="bg-purple-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="md:w-1/2 md:pl-8 text-left">
+              <div class="text-3xl text-purple-400 mb-2">2025</div>
+              <div class="font-bold text-xl">Getting our Company</div>
+              <p class="text-gray-400 mt-2">
+                My Partner started to code and learned it pretty fast, because he likes Serhat so much
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
 <footer class="bg-[#1f1f1f] text-white px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-16 2xl:py-16 grid gap-8 justify-items-center text-center">
 
@@ -302,17 +393,17 @@
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 text-sm sm:text-base md:text-lg lg:text-xl">
-      <a href="#" class="hover:text-[#bb86fc]">News</a>
-      <a href="#" class="hover:text-[#bb86fc]">Our Team</a>
-      <a href="#" class="hover:text-[#bb86fc]">Contact Us</a>
-      <a href="#" class="hover:text-[#bb86fc]">About</a>
+      <a href="#" class="hover:text-green-600">News</a>
+      <a href="#" class="hover:text-green-600">Our Team</a>
+      <a href="#" class="hover:text-green-600">Contact Us</a>
+      <a href="#" class="hover:text-green-600">About</a>
     </div>
 
     <hr class="w-11/12 border border-[#ccc]" />
 
     <p class="text-xs sm:text-sm md:text-base lg:text-lg text-[#ccc]">
       Copyright ©2025: Designed by 
-      <a href="#" class="text-[#bb86fc] hover:underline">Company</a>
+      <a href="#" class="text-green-600 hover:underline">Company</a>
     </p>
 </footer>
 
@@ -375,6 +466,49 @@
         const faqItem = element.parentElement;
         faqItem.classList.toggle("faq-active");
     }
+
+    // Timeline
+    const steps = document.querySelectorAll(".timeline-step");
+    const line = document.getElementById("timelineLine");
+    const container = document.getElementById("timelineLineContainer");
+
+    let lastY = window.scrollY, percent = 0, isScroll = false, visible = new Map();
+
+    function updateLine() {
+        const { top, height } = container.getBoundingClientRect();
+        const offset = Math.min(Math.max(window.innerHeight / 2 - top, 0), height);
+        const p = (offset / height) * 100;
+        if (p > percent || window.scrollY > lastY) line.style.height = `${(percent = p)}%`;
+        lastY = window.scrollY;
+    }
+
+    const observer = new IntersectionObserver(
+        entries => entries.forEach(({ target, intersectionRatio }) => {
+        const seen = visible.get(target);
+        if (intersectionRatio > 0.1 && !seen) {
+            target.classList.add("visible");
+            visible.set(target, true);
+        } else if (seen && isScroll) {
+            setTimeout(() => {
+            target.classList.remove("visible");
+            visible.set(target, false);
+            }, 300);
+        }
+        }),
+        { rootMargin: "-15% 0% -50%", threshold: [0.1] }
+    );
+
+    let timeout;
+    window.addEventListener("scroll", () => {
+        isScroll = true;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => (isScroll = false), 200);
+        updateLine();
+    });
+
+    window.addEventListener("resize", updateLine);
+    steps.forEach(step => observer.observe(step));
+    updateLine();
 </script>
 
 </body>
