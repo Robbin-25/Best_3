@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-Plants</title>
-     <link rel="stylesheet" href="output.css">
+     <link rel="stylesheet" href="../dist/output.css">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
@@ -13,7 +13,7 @@
 
     /* Body */
 ::selection {
-    background-color: #20b946;
+    background-color: var(--color-green-600);
     color: white;
 }
 
@@ -36,16 +36,16 @@
 
     /* Hero */        
 .bg-gradient {
-    background: radial-gradient(circle, rgba(128, 0, 255, 0.6), rgba(121, 58, 185, 0.33), rgba(17, 17, 17, 1) 75%);
+    background: radial-gradient(circle, var(--color-green-600), var(--color-green-950) 20%, var(--color-black) 95%);
 }   
 .text-gradient {
-    background-image: linear-gradient(to right, #B14FFF, #D54FDB);
+    background-image: linear-gradient(to right, var(--color-green-600), var(--color-green-700));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }     
 .btn-gradient {
-    background: linear-gradient(to bottom, #B14FFF, #D54FDB);
+    background: linear-gradient(to bottom, var(--color-green-600), var(--color-green-700));
 }    
 @keyframes scrollAnimation {
     0% {
@@ -85,7 +85,6 @@
     top: 0;
     width: 4px;
     height: 0%;
-    background-color: #9333ea;
     transform: translateX(-50%);
     transition: height 0.2s ease-out;
     z-index: 0;
@@ -99,8 +98,6 @@
     opacity: 1;
     transform: translateY(0);
 }
-
-   
 </style>
 </head>
 
@@ -143,10 +140,10 @@
         </p>
             
         <div class="flex flex-row sm:flex-crow gap-4 mb-8">
-            <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30">
+            <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-600/30">
                 Contact Us →
             </button>
-            <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-purple-500 transition transform hover:-translate-y-0.5 hover:bg-purple-500/10">
+            <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-green-600 transition transform hover:-translate-y-0.5 hover:bg-green-600/10">
                 Learn About Us
             </button>
         </div>
@@ -156,7 +153,7 @@
         <div class="scroll-ball w-4 h-4 bg-white rounded-full absolute top-2"></div>
     </div>
 </section>
- 
+
     <!-- Team -->
 <section class="py-20 bg-[#111111]">
     <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center">
@@ -167,10 +164,10 @@
         <p class="text-[14px] text-center text-gray-200 relative mb-10">Get support 24/7, with our award-winning support network of growth experts.</p>
 
         <div class="flex flex-row sm:flex-row gap-5 mb-8 max-w-4xl mx-auto">
-            <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30">
+            <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-600/30">
                 Contact Us →
             </button>
-            <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-purple-500 transition transform hover:-translate-y-0.5 hover:bg-purple-500/10">
+            <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-green-600 transition transform hover:-translate-y-0.5 hover:bg-green-600/10">
                 Learn About Us
             </button>
         </div>
@@ -213,7 +210,7 @@
 <section class="flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0 py-24 max-w-6xl mx-auto">
         <div class="w-full lg:w-4/5">
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
-                The Question we get <span class="text-[#BCBD8B]">asked</span>
+                The Question we get <span class="text-green-600">asked</span>
             </h1>
             <p class="text-base sm:text-lg mb-8 text-center">Serhat ist ein komischer</p>
 
@@ -268,7 +265,7 @@
     <div class="max-w-7xl mx-auto px-4">
         <h1 class="text-4xl font-semibold text-center mb-10 text-white relative">
             Why Our Service is
-            <span class="block w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mt-4"></span>
+            <span class="block w-20 h-1 bg-gradient-to-r from-green-600 to-green-700 mx-auto mt-4"></span>
         </h1>
         
         <div class="flex flex-wrap justify-center gap-10">
@@ -313,19 +310,19 @@
       <h2 class="text-center text-4xl font-bold mb-20">Our Journey</h2>
 
       <div class="relative max-w-5xl mx-auto timeline-line" id="timelineLineContainer">
-        <div id="timelineLine" class="absolute left-1/2 top-0 w-1 bg-purple-600 z-0" style="transform: translateX(-50%); height: 0;"></div>
+        <div id="timelineLine" class="absolute left-1/2 top-0 w-1 bg-gradient-to-b from-0% to-green-600 z-0" style="transform: translateX(-50%); height: 0;"></div>
 
         <div class="space-y-32">
           <!-- Step Template -->
           <div class="timeline-step flex flex-col md:flex-row items-center relative z-10">
             <div class="md:w-1/2 md:pr-8 text-right">
-              <div class="text-3xl text-purple-400 mb-2">2023</div>
+              <div class="text-3xl text-green-700 mb-2">2023</div>
               <div class="font-bold text-xl">Started Web Dev</div>
               <p class="text-gray-400 mt-2">
                 With over 5 years of experience in web development, I specialize in creating beautiful
               </p>
             </div>
-            <div class="bg-purple-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
+            <div class="bg-green-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
               <i class="fas fa-laptop-code"></i>
             </div>
             <div class="md:w-1/2 hidden md:block"></div>
@@ -333,11 +330,11 @@
 
           <div class="timeline-step flex flex-col md:flex-row items-center relative z-10">
             <div class="md:w-1/2 hidden md:block"></div>
-            <div class="bg-purple-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
+            <div class="bg-green-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
               <i class="fas fa-user-friends"></i>
             </div>
             <div class="md:w-1/2 md:pl-8 text-left">
-              <div class="text-3xl text-purple-400 mb-2">2024</div>
+              <div class="text-3xl text-green-700 mb-2">2024</div>
               <div class="font-bold text-xl">Coding buddy</div>
               <p class="text-gray-400 mt-2">
                 My Partner started to code and learned it pretty fast, because he likes Serhat so much
@@ -347,13 +344,13 @@
 
           <div class="timeline-step flex flex-col md:flex-row items-center relative z-10">
             <div class="md:w-1/2 md:pr-8 text-right">
-              <div class="text-3xl text-purple-400 mb-2">2025</div>
+              <div class="text-3xl text-green-700 mb-2">2025</div>
               <div class="font-bold text-xl">Starting to Work</div>
               <p class="text-gray-400 mt-2">
                 With over 5 years of experience in web development, I specialize in creating beautiful
               </p>
             </div>
-            <div class="bg-purple-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
+            <div class="bg-green-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
               <i class="fas fa-cogs"></i>
             </div>
             <div class="md:w-1/2 hidden md:block"></div>
@@ -361,11 +358,11 @@
 
           <div class="timeline-step flex flex-col md:flex-row items-center relative z-10">
             <div class="md:w-1/2 hidden md:block"></div>
-            <div class="bg-purple-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
+            <div class="bg-green-600 text-white p-4 rounded-full shadow-lg text-2xl mx-4">
               <i class="fas fa-cogs"></i>
             </div>
             <div class="md:w-1/2 md:pl-8 text-left">
-              <div class="text-3xl text-purple-400 mb-2">2025</div>
+              <div class="text-3xl text-green-700 mb-2">2025</div>
               <div class="font-bold text-xl">Getting our Company</div>
               <p class="text-gray-400 mt-2">
                 My Partner started to code and learned it pretty fast, because he likes Serhat so much
@@ -405,7 +402,7 @@
 
     <p class="text-xs sm:text-sm md:text-base lg:text-lg text-[#ccc]">
       Copyright ©2025: Designed by 
-      <a href="#" class="text-green-600 hover:underline">Company</a>
+      <a href="#" class="text-green-600 hover:text-green-700">Company</a>
     </p>
 </footer>
 
@@ -511,73 +508,6 @@
     window.addEventListener("resize", updateLine);
     steps.forEach(step => observer.observe(step));
     updateLine();
-
-
-     const codeToType = [
-            '<span class="text-blue-400">import</span> <span class="text-purple-400">React</span> <span class="text-blue-400">from</span> <span class="text-green-400">\'react\'</span>;',
-            '<span class="text-blue-400">import</span> <span class="text-purple-400">{ motion }</span> <span class="text-blue-400">from</span> <span class="text-green-400">\'framer-motion\'</span>;',
-            '',
-            '<span class="text-blue-400">function</span> <span class="text-orange-400">Portfolio</span>() {',
-            '  <span class="text-blue-400">const</span> <span class="text-pink-500">greeting</span> = <span class="text-green-400">\'Hello, World!\'</span>;',
-            '  <span class="text-blue-400">const</span> <span class="text-pink-500">subtitle</span> = <span class="text-green-400">\'Welcome to my portfolio\'</span>;',
-            '  <span class="text-blue-400">const</span> <span class="text-pink-500">skills</span> = [<span class="text-green-400">\'React\'</span>, <span class="text-green-400">\'TypeScript\'</span>, <span class="text-green-400">\'Node.js\'</span>];',
-            '',
-            '  <span class="text-blue-400">return</span> (',
-            '    <span class="text-yellow-300">&lt;motion.div</span>',
-            
-        ];
-
-        function typeCode(callback) {
-            const codeContent = document.getElementById('portfolio-codeContent');
-            let lineIndex = 0;
-            let charIndex = 0;
-            let currentLine = document.createElement('div');
-            currentLine.className = 'leading-relaxed';
-            codeContent.appendChild(currentLine);
-
-            function typeNextChar() {
-                if (lineIndex < codeToType.length) {
-                    if (charIndex === 0) currentLine.innerHTML = '';
-
-                    if (charIndex < codeToType[lineIndex].length) {
-                        if (codeToType[lineIndex].slice(charIndex).startsWith('<span')) {
-                            const spanEndIndex = codeToType[lineIndex].indexOf('>', charIndex) + 1;
-                            currentLine.innerHTML += codeToType[lineIndex].slice(charIndex, spanEndIndex);
-                            charIndex = spanEndIndex;
-                        } else if (codeToType[lineIndex].slice(charIndex).startsWith('</span>')) {
-                            currentLine.innerHTML += '</span>';
-                            charIndex += 7;
-                        } else {
-                            currentLine.innerHTML += codeToType[lineIndex].charAt(charIndex);
-                            charIndex++;
-                        }
-                        setTimeout(typeNextChar, 20);
-                    } else {
-                        lineIndex++;
-                        charIndex = 0;
-                        if (lineIndex < codeToType.length) {
-                            currentLine = document.createElement('div');
-                            currentLine.className = 'leading-relaxed';
-                            codeContent.appendChild(currentLine);
-                        }
-                        setTimeout(typeNextChar, 80);
-                    }
-                } else if (callback) {
-                    callback();
-                }
-            }
-
-            typeNextChar();
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const codeContent = document.getElementById('portfolio-codeContent');
-            typeCode(function () {
-                const cursor = document.createElement('span');
-                cursor.className = 'inline-block w-1 h-5 bg-white typing-cursor align-middle ml-1';
-                codeContent.lastChild.appendChild(cursor);
-            });
-        });
 </script>
 
 </body>
