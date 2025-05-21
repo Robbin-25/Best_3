@@ -776,6 +776,72 @@
     window.addEventListener("resize", updateLine);
     steps.forEach(step => observer.observe(step));
     updateLine();
+
+     const codeToType = [
+            '<span class="text-blue-400">import</span> <span class="text-purple-400">React</span> <span class="text-blue-400">from</span> <span class="text-green-400">\'react\'</span>;',
+            '<span class="text-blue-400">import</span> <span class="text-purple-400">{ motion }</span> <span class="text-blue-400">from</span> <span class="text-green-400">\'framer-motion\'</span>;',
+            '',
+            '<span class="text-blue-400">function</span> <span class="text-orange-400">Portfolio</span>() {',
+            '  <span class="text-blue-400">const</span> <span class="text-pink-500">greeting</span> = <span class="text-green-400">\'Hello, World!\'</span>;',
+            '  <span class="text-blue-400">const</span> <span class="text-pink-500">subtitle</span> = <span class="text-green-400">\'Welcome to my portfolio\'</span>;',
+            '  <span class="text-blue-400">const</span> <span class="text-pink-500">skills</span> = [<span class="text-green-400">\'React\'</span>, <span class="text-green-400">\'TypeScript\'</span>, <span class="text-green-400">\'Node.js\'</span>];',
+            '',
+            '  <span class="text-blue-400">return</span> (',
+            '    <span class="text-yellow-300">&lt;motion.div</span>',
+            
+        ];
+
+        function typeCode(callback) {
+            const codeContent = document.getElementById('portfolio-codeContent');
+            let lineIndex = 0;
+            let charIndex = 0;
+            let currentLine = document.createElement('div');
+            currentLine.className = 'leading-relaxed';
+            codeContent.appendChild(currentLine);
+
+            function typeNextChar() {
+                if (lineIndex < codeToType.length) {
+                    if (charIndex === 0) currentLine.innerHTML = '';
+
+                    if (charIndex < codeToType[lineIndex].length) {
+                        if (codeToType[lineIndex].slice(charIndex).startsWith('<span')) {
+                            const spanEndIndex = codeToType[lineIndex].indexOf('>', charIndex) + 1;
+                            currentLine.innerHTML += codeToType[lineIndex].slice(charIndex, spanEndIndex);
+                            charIndex = spanEndIndex;
+                        } else if (codeToType[lineIndex].slice(charIndex).startsWith('</span>')) {
+                            currentLine.innerHTML += '</span>';
+                            charIndex += 7;
+                        } else {
+                            currentLine.innerHTML += codeToType[lineIndex].charAt(charIndex);
+                            charIndex++;
+                        }
+                        setTimeout(typeNextChar, 20);
+                    } else {
+                        lineIndex++;
+                        charIndex = 0;
+                        if (lineIndex < codeToType.length) {
+                            currentLine = document.createElement('div');
+                            currentLine.className = 'leading-relaxed';
+                            codeContent.appendChild(currentLine);
+                        }
+                        setTimeout(typeNextChar, 80);
+                    }
+                } else if (callback) {
+                    callback();
+                }
+            }
+
+            typeNextChar();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const codeContent = document.getElementById('portfolio-codeContent');
+            typeCode(function () {
+                const cursor = document.createElement('span');
+                cursor.className = 'inline-block w-1 h-5 bg-white typing-cursor align-middle ml-1';
+                codeContent.lastChild.appendChild(cursor);
+            });
+        });
 </script>
 
 </body>
