@@ -279,24 +279,6 @@
   .z-\[1000\] {
     z-index: 1000;
   }
-  .col-start-1 {
-    grid-column-start: 1;
-  }
-  .col-start-2 {
-    grid-column-start: 2;
-  }
-  .col-start-3 {
-    grid-column-start: 3;
-  }
-  .col-end-2 {
-    grid-column-end: 2;
-  }
-  .col-end-3 {
-    grid-column-end: 3;
-  }
-  .col-end-4 {
-    grid-column-end: 4;
-  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -570,11 +552,11 @@
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .grid-rows-3 {
-    grid-template-rows: repeat(3, minmax(0, 1fr));
+  .grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -745,6 +727,9 @@
   }
   .bg-\[\#111111\] {
     background-color: #111111;
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
@@ -1134,16 +1119,6 @@
       outline-style: none;
     }
   }
-  .sm\:col-start-auto {
-    @media (width >= 40rem) {
-      grid-column-start: auto;
-    }
-  }
-  .sm\:col-end-auto {
-    @media (width >= 40rem) {
-      grid-column-end: auto;
-    }
-  }
   .sm\:block {
     @media (width >= 40rem) {
       display: block;
@@ -1152,11 +1127,6 @@
   .sm\:grid-cols-4 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-  .sm\:grid-rows-1 {
-    @media (width >= 40rem) {
-      grid-template-rows: repeat(1, minmax(0, 1fr));
     }
   }
   .sm\:flex-row {
