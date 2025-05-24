@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-Plants</title>
-     <link rel="stylesheet" href="output.css">
+     <link rel="stylesheet" href="../dist/output.css">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
@@ -153,7 +153,7 @@
     from, to { opacity: 1; }
     50% { opacity: 0; }
  }
-.text-pink-500 { color: #ec4899; }
+.span.text-pink-500 { color: #ec4899; }
 .text-green-400 { color: #4ade80; }
 .text-yellow-300 { color: #fde047; }
 .text-blue-400 { color: #38bdf8; }
@@ -175,7 +175,7 @@
     <!-- Navbar -->
 <nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 md:bg-transparent z-1000 flex items-center justify-between px-8 py-4 shadow transition-all duration-500">
 
-    <div class="z-[1000]"><img class="h-9 mb-1 w-auto" src="Slice_13-removebg-preview (1).png" alt=""></div>
+    <div class="z-[1000]"><img class="h-9 mb-1 mr-[30.32px] lg:mr-[90.32px] w-auto" src="Slice_13-removebg-preview (1).png" alt=""></div>
 
     <ul class="nav-links flex md:opacity-100 md:visible md:flex-row md:w-auto md:relative md:top-0 md:left-auto opacity-0 invisible flex-col w-full absolute top-[22.5px] left-0 bg-gray-800 md:bg-transparent rounded-b-2xl md:p-0 z-500 gap-x-[35px] gap-y-[5px] text-white text-lg font-medium transition-all duration-500">
         <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Home</a></li>
@@ -336,10 +336,10 @@
 
     <div class="w-full flex flex-wrap justify-center gap-9 max-w-4xl mx-auto pr-0">
 
-      <!-- Max Musterman -->
+      <!-- Max Warstädt -->
       <div class="w-96 p-5 rounded-xl border border-gray-600 bg-[#0B0F19] text-white shadow-md transition-transform duration-300 hover:-translate-y-1 relative overflow-hidden group h-110 cursor-pointer">
         <div class="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-300"
-          style="background-image: url('Human 2.jpg'); z-index: 0;">
+          style="background-image: url('bl6.jpg'); z-index: 0;">
         </div>
         <div class="flex flex-col justify-between h-full relative z-10">
           <div class="bg-gray-800 rounded-lg p-4 mx-2 mb-1 absolute bottom-0 left-0 right-0 border-gray-600 border">
@@ -352,14 +352,14 @@
         </div>
       </div>
 
-      <!-- Erika Musterman -->
+      <!-- Max Warstädt -->
       <div class="w-96 p-5 rounded-xl border border-gray-600 bg-[#0B0F19] text-white shadow-md transition-transform duration-300 hover:-translate-y-1 relative overflow-hidden group h-110 cursor-pointer">
         <div class="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-300"
-          style="background-image: url('Human 1.jpg'); z-index: 0;">
+          style="background-image: url('bl5.jpg'); z-index: 0;">
         </div>
         <div class="flex flex-col justify-between h-full relative z-10">
           <div class="bg-gray-800 rounded-lg p-4 mx-2 mb-1 absolute bottom-0 left-0 right-0 border-gray-600 border">
-            <h1 class="text-xl font-semibold mb-2">Erika Mustermam</h1>
+            <h1 class="text-xl font-semibold mb-2">Erika Musterman</h1>
             <p class="text-gray-300 text-base leading-relaxed">
               Full Stack Developer & Problem Solver<br>
               <p class="text-sm m-2 text-gray-400">Turning complex challenges into elegant digital solutions.</p>
@@ -667,9 +667,9 @@
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
         navbar.classList.add(
-          'w-[80vw]',
+          'w-[84vw]',
           'mt-4',
-          'mx-[10vw]',
+          'mx-[8vw]',
           'rounded-2xl',
           'py-2',
           'px-4',
@@ -683,9 +683,9 @@
         navLinks.classList.remove('md:bg-transparent');
       } else {
         navbar.classList.remove(
-          'w-[80vw]',
+          'w-[84vw]',
           'mt-4',
-          'mx-[10vw]',
+          'mx-[8vw]',
           'rounded-2xl',
           'py-2',
           'px-4',
@@ -758,73 +758,92 @@
     updateLine();
 
     // Editor
-     const codeToType = [
-            '<span class="text-blue-400">import</span> <span class="text-purple-400">React</span> <span class="text-blue-400">from</span> <span class="text-green-400">\'react\'</span>;',
-            '<span class="text-blue-400">import</span> <span class="text-purple-400">{ motion }</span> <span class="text-blue-400">from</span> <span class="text-green-400">\'framer-motion\'</span>;',
-            '',
-            '<span class="text-blue-400">function</span> <span class="text-orange-400">Portfolio</span>() {',
-            '  <span class="text-blue-400">const</span> <span class="text-pink-500">greeting</span> = <span class="text-green-400">\'Hello, World!\'</span>;',
-            '  <span class="text-blue-400">const</span> <span class="text-pink-500">subtitle</span> = <span class="text-green-400">\'Welcome to my portfolio\'</span>;',
-            '  <span class="text-blue-400">const</span> <span class="text-pink-500">skills</span> = [<span class="text-green-400">\'React\'</span>, <span class="text-green-400">\'TypeScript\'</span>, <span class="text-green-400">\'Node.js\'</span>];',
-            '',
-            '  <span class="text-blue-400">return</span> (',
-            '    <span class="text-yellow-300">&lt;motion.div</span>',
-            
-        ];
+  const codeToType = [
+    '<span class="text-blue-400">import</span> <span class="text-purple-400">React</span> <span class="text-blue-400">from</span> <span class="text-green-400">\'react\'</span>;',
+    '<span class="text-blue-400">import</span> <span class="text-purple-400">{ motion }</span> <span class="text-blue-400">from</span> <span class="text-green-400">\'framer-motion\'</span>;',
+    '',
+    '<span class="text-blue-400">function</span> <span class="text-orange-400">Portfolio</span>() {',
+    '  <span class="text-blue-400">const</span> <span class="text-pink-500">greeting</span> = <span class="text-green-400">\'Hello, World!\'</span>;',
+    '  <span class="text-blue-400">const</span> <span class="text-pink-500">subtitle</span> = <span class="text-green-400">\'Welcome to my portfolio\'</span>;',
+    '  <span class="text-blue-400">const</span> <span class="text-pink-500">skills</span> = [<span class="text-green-400">\'React\'</span>, <span class="text-green-400">\'TypeScript\'</span>, <span class="text-green-400">\'Node.js\'</span>];',
+    '',
+    '  <span class="text-blue-400">return</span> (',
+    '    <span class="text-yellow-300">&lt;motion.div</span>'
+  ];
 
-        function typeCode(callback) {
-            const codeContent = document.getElementById('portfolio-codeContent');
-            let lineIndex = 0;
-            let charIndex = 0;
-            let currentLine = document.createElement('div');
+  function typeCode(callback) {
+    const codeContent = document.getElementById('portfolio-codeContent');
+    let lineIndex = 0;
+    let charIndex = 0;
+    let currentLine = document.createElement('div');
+    currentLine.className = 'leading-relaxed';
+    codeContent.appendChild(currentLine);
+
+    let currentHTML = '';
+
+    function typeNextChar() {
+      if (lineIndex < codeToType.length) {
+        const line = codeToType[lineIndex];
+
+        if (charIndex < line.length) {
+          currentHTML += line.charAt(charIndex);
+          currentLine.innerHTML = currentHTML;
+          charIndex++;
+
+          // Stärker variierende Tippgeschwindigkeit (10ms bis 60ms)
+          // Pausen-Zeichen bekommen extra Pause (5-10ms zusätzlich)
+          const char = line.charAt(charIndex);
+          const isPauseChar = /[\s,.;]/.test(char);
+
+          const baseMin = 10;
+          const baseMax = 30;
+          const randomBase = Math.floor(Math.random() * (baseMax - baseMin + 1)) + baseMin;
+
+          const pauseExtraMin = 0.1;
+          const pauseExtraMax = 0.2;
+          const pauseExtra = isPauseChar
+            ? Math.floor(Math.random() * (pauseExtraMax - pauseExtraMin + 1)) + pauseExtraMin
+            : 0;
+
+          const delay = randomBase + pauseExtra;
+
+          setTimeout(typeNextChar, delay);
+        } else {
+          lineIndex++;
+          charIndex = 0;
+          currentHTML = '';
+
+          if (lineIndex < codeToType.length) {
+            currentLine = document.createElement('div');
             currentLine.className = 'leading-relaxed';
             codeContent.appendChild(currentLine);
+          }
 
-            function typeNextChar() {
-                if (lineIndex < codeToType.length) {
-                    if (charIndex === 0) currentLine.innerHTML = '';
+          // Zufällige Pause zwischen Zeilen: 2ms bis 10ms
+          const linePauseMin = 2;
+          const linePauseMax = 10;
+          const lineDelay = Math.floor(Math.random() * (linePauseMax - linePauseMin + 1)) + linePauseMin;
 
-                    if (charIndex < codeToType[lineIndex].length) {
-                        if (codeToType[lineIndex].slice(charIndex).startsWith('<span')) {
-                            const spanEndIndex = codeToType[lineIndex].indexOf('>', charIndex) + 1;
-                            currentLine.innerHTML += codeToType[lineIndex].slice(charIndex, spanEndIndex);
-                            charIndex = spanEndIndex;
-                        } else if (codeToType[lineIndex].slice(charIndex).startsWith('</span>')) {
-                            currentLine.innerHTML += '</span>';
-                            charIndex += 7;
-                        } else {
-                            currentLine.innerHTML += codeToType[lineIndex].charAt(charIndex);
-                            charIndex++;
-                        }
-                        setTimeout(typeNextChar, 20);
-                    } else {
-                        lineIndex++;
-                        charIndex = 0;
-                        if (lineIndex < codeToType.length) {
-                            currentLine = document.createElement('div');
-                            currentLine.className = 'leading-relaxed';
-                            codeContent.appendChild(currentLine);
-                        }
-                        setTimeout(typeNextChar, 80);
-                    }
-                } else if (callback) {
-                    callback();
-                }
-            }
-
-            typeNextChar();
+          setTimeout(typeNextChar, lineDelay);
         }
+      } else if (callback) {
+        callback();
+      }
+    }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const codeContent = document.getElementById('portfolio-codeContent');
-            typeCode(function () {
-                const cursor = document.createElement('span');
-                cursor.className = 'inline-block w-1 h-5 bg-white typing-cursor align-middle ml-1';
-                codeContent.lastChild.appendChild(cursor);
-            });
-        });
+    typeNextChar();
+  }
 
-    // Editor
+  document.addEventListener('DOMContentLoaded', function () {
+    const codeContent = document.getElementById('portfolio-codeContent');
+    typeCode(function () {
+      const cursor = document.createElement('span');
+      cursor.className = 'inline-block w-1 h-5 bg-white typing-cursor align-middle ml-1';
+      codeContent.lastChild.appendChild(cursor);
+    });
+  });
+
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
