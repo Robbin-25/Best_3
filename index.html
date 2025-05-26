@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-Plants</title>
-     <link rel="stylesheet" href="output.css">
+     <link rel="stylesheet" href="../dist/output.css">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
@@ -50,19 +50,47 @@
     transform: translateY(-11px) rotate(135deg);
 }
 
-    /* Hero */        
-.bg-gradient {
-    background: radial-gradient(circle, var(--color-green-700), rgb(0, 10, 0), var(--color-black));
-}   
-.text-gradient {
-    background-image: linear-gradient(to right, var(--color-green-600), var(--color-green-700));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}     
-.btn-gradient {
-    background: linear-gradient(to bottom, var(--color-green-600), var(--color-green-700));
-}    
+  :root {
+            --color-green-600: #16a34a;
+            --color-green-700: #15803d;
+            --color-black: #000000;
+        }
+
+        .bg-gradient {
+            background: 
+                radial-gradient(circle at top right, var(--color-green-700), transparent 50%),
+                radial-gradient(circle at bottom left, var(--color-green-600), transparent 50%),
+                rgb(0, 10, 0);
+        }
+
+        .text-gradient {
+            background-image: linear-gradient(to right, var(--color-green-600), var(--color-green-700));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(to bottom, var(--color-green-600), var(--color-green-700));
+        }
+
+        .scroll-ball {
+            animation: scroll 2s infinite;
+        }
+
+        @keyframes scroll {
+            0%, 20% { transform: translateY(0); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(20px); opacity: 0; }
+        }
+
+        /* Zusätzliche Glasmorphism-Effekte für moderne Optik */
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
 @keyframes scrollAnimation {
     0% {
         top: 0px;
@@ -168,6 +196,46 @@
 .transition-all {
     transition: all 0.3s ease;
 }
+ :root {
+            --color-green-600: #16a34a;
+            --color-green-700: #15803d;
+            --color-black: #000000;
+        }
+
+        .bg-gradient {
+            background: 
+                radial-gradient(circle at top right, rgba(21, 128, 61, 0.15), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(22, 163, 74, 0.12), transparent 40%),
+                #000000;
+        }
+
+        .text-gradient {
+            background-image: linear-gradient(to right, var(--color-green-600), var(--color-green-700));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(to bottom, var(--color-green-600), var(--color-green-700));
+        }
+
+        .scroll-ball {
+            animation: scroll 2s infinite;
+        }
+
+        @keyframes scroll {
+            0%, 20% { transform: translateY(0); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(20px); opacity: 0; }
+        }
+
+        /* Zusätzliche Glasmorphism-Effekte für moderne Optik */
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
 </style>
 </head>
 
@@ -204,42 +272,45 @@
     </div>
 </nav>
 
-    <!-- Hero -->
-<section class="relative h-screen w-full">
-      
-    <div class="absolute inset-0 bg-gradient filter blur-xl opacity-90 z-0"></div>
-    
-    <div class="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8">
-        <h2 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-6">
-            <span class="text-gradient">Modern Websites</span> <br class="hidden sm:block"> That Mean Business
-        </h2>
+<section class="relative h-screen w-full overflow-hidden">
+        <!-- Dual Gradient Background -->
+        <div class="absolute inset-0 bg-gradient filter blur-xl opacity-90 z-0"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8">
+            <h2 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-6">
+                <span class="text-gradient">Modern Websites</span> 
+                <br class="hidden sm:block"> 
+                That Mean Business
+            </h2>
             
-        <p class="text-gray-200 text-lg md:text-xl text-center mb-8 max-w-2xl">
-            We craft sleek, lightning-fast websites that captivate your audience and 
-            <br class="hidden md:block"> deliver seamless experiences on every device.
-        </p>
+            <p class="text-gray-200 text-lg md:text-xl text-center mb-8 max-w-2xl">
+                We craft sleek, lightning-fast websites that captivate your audience and 
+                <br class="hidden md:block"> 
+                deliver seamless experiences on every device.
+            </p>
             
-        <div class="flex flex-row sm:flex-crow gap-4 mb-8">
-            <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-600/30">
-                Contact Us →
-            </button>
-            <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-green-600 transition transform hover:-translate-y-0.5 hover:bg-green-600/10">
-                Learn About Us
-            </button>
+            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-600/30">
+                    Contact Us →
+                </button>
+                <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-green-600 transition transform hover:-translate-y-0.5 hover:bg-green-600/10">
+                    Learn About Us
+                </button>
+            </div>
         </div>
-    </div>
-         
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-5 h-10 rounded-full border-2 border-white flex justify-center z-10 cursor-pointer overflow-hidden">
-        <div class="scroll-ball w-4 h-4 bg-white rounded-full absolute top-2"></div>
-    </div>
-</section>
-
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-5 h-10 rounded-full border-2 border-white flex justify-center z-10 cursor-pointer overflow-hidden">
+            <div class="scroll-ball w-4 h-4 bg-white rounded-full absolute top-2"></div>
+        </div>
+    </section> 
    <!--  Editor  -->
-    <div class="bg-[#111111] leading-relaxed">
+    <div class="bg-[#000000] leading-relaxed">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <section class="py-12 md:py-24 flex flex-col items-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-3 text-white text-center">About Us</h2>
-            <div class="h-1 w-24 md:w-32 rounded-[1px] bg-green-600"></div>
+            <div class="h-1 w-20 md:w-20 rounded-[1px] bg-green-600"></div>
 
             <!-- Frühere Umgruppierung von flex-col zu flex-row (sm statt md) -->
             <div class="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-16 mt-8 lg:mt-10 w-full">
@@ -258,7 +329,7 @@
 
                 <!-- ABOUT TEXT UND SKILLS -->
                 <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
-                    <h3 class="text-2xl lg:text-3xl font-semibold mb-4 lg:mb-8 text-green-500">Passionate Web Developer</h3>
+                    <h3 class="text-2xl lg:text-3xl font-semibold mb-4 lg:mb-8 text-white">Passionate Web Developer</h3>
                     <div id="portfolio-aboutDescription">
                         <p class="mb-6 text-lg lg:text-xl text-gray-300 leading-relaxed">
                             We are a passionate web development duo dedicated to building modern, clean, and user-friendly websites. Combining our skills and creativity, we deliver tailored digital solutions that help businesses grow and stand out online.
@@ -280,7 +351,7 @@
 </div>
 
         <!-- Service -->
-<section class="py-20 bg-[#111111]">
+<section class="py-20 bg-[#030303]">
     <div class="max-w-7xl mx-auto px-4">
         <h1 class="text-4xl font-semibold text-center mb-10 text-white relative">
             Why Our Service is
@@ -326,10 +397,10 @@
 
 
 <!-- Team -->
-<section class="py-20 bg-[#111111]">
+<section class="py-20 bg-[#00000]">
   <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center">
     <h1 class="text-4xl font-semibold text-center mb-2 text-white relative">
-      Meet the <span class="text-gradient">Creators</span> Behind the Code
+      Meet the <span class="text-gradient font-bold">Creators</span> Behind the Code
     </h1>
     <p class="text-lg text-center text-gray-200 relative mb-10">
       A passionate duo turning ideas into beautiful websites.
@@ -386,7 +457,7 @@
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
                 The Questions We Get <span class="text-green-600">Asked</span>
             </h1>
-            <p class="text-base sm:text-xl mb-8 text-gray-200 text-center">Let’s Clear Things Up</p>
+            <p class="text-base sm:text-xl mb-8 text-gray-200 text-center">Let’s wipe the fog off the glass and get a sharp, focused view of what’s really going on</p>
 
             <div class="bg-gray-950 rounded-xl border border-gray-700 shadow-md p-6 lg:p-8 px-6 space-y-4">
                 <!-- FAQ Item -->
@@ -450,7 +521,7 @@
     
 
     <!-- Timeline -->
-    <section id="timeline" class="py-20 px-4 bg-[#111111]">
+    <section id="timeline" class="py-20 px-4 bg-[#00000]">
       <h2 class="text-center text-4xl font-bold mb-20">Our Story So Far</h2>
     
       <div class="relative max-w-5xl mx-auto timeline-line" id="timelineLineContainer">
@@ -519,7 +590,7 @@
 
 
     <!-- Contact -->
-<div class="bg-[#111111] min-h-screen flex flex-col items-center justify-center p-4 mobile-section">
+<div class="bg-[#00000] min-h-screen flex flex-col items-center justify-center p-4 mobile-section">
   <div class="text-center mb-8">
     <h2 class="text-3xl font-bold text-white">Get in Touch</h2>
     <div class="mx-auto mt-2 h-1 w-24 bg-gradient-to-r rounded-[1px] from-green-600 to-green-700"></div>
@@ -626,7 +697,7 @@
 </div>
 
     <!-- Footer -->
-<footer class="bg-[#1f1f1f] text-white px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-16 2xl:py-16 grid gap-8 justify-items-center text-center">
+<footer class="bg-[#0c0c0c] text-white px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-16 2xl:py-16 grid gap-8 justify-items-center text-center">
 
     <div class="grid grid-cols-4 grid-rows-1 gap-3 sm:gap-8 md:gap-10 lg:gap-12">
       <a href="#" class="bg-gray-950 w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-lg sm:rounded-xl text-2xl lg:text-3xl border border-gray-700 transition-transform duration-300 hover:scale-110">
