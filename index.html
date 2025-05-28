@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company</title>
-     <link rel="stylesheet" href="output.css">
+     <link rel="stylesheet" href="../dist/output.css">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
@@ -49,47 +49,6 @@
 .nav-hamburger.active .nav-bar:nth-child(3) {
     transform: translateY(-11px) rotate(135deg);
 }
-
-  :root {
-            --color-green-600: #16a34a;
-            --color-green-700: #15803d;
-            --color-black: #000000;
-        }
-
-        .bg-gradient {
-            background: 
-                radial-gradient(circle at top right, var(--color-green-700), transparent 50%),
-                radial-gradient(circle at bottom left, var(--color-green-600), transparent 50%),
-                rgb(0, 10, 0);
-        }
-
-        .text-gradient {
-            background-image: linear-gradient(to right, var(--color-green-600), var(--color-green-700));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .btn-gradient {
-            background: linear-gradient(to bottom, var(--color-green-600), var(--color-green-700));
-        }
-
-        .scroll-ball {
-            animation: scroll 2s infinite;
-        }
-
-        @keyframes scroll {
-            0%, 20% { transform: translateY(0); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateY(20px); opacity: 0; }
-        }
-
-        /* Zusätzliche Glasmorphism-Effekte für moderne Optik */
-        .glass-effect {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
 
 @keyframes scrollAnimation {
     0% {
@@ -196,46 +155,43 @@
 .transition-all {
     transition: all 0.3s ease;
 }
- :root {
-            --color-green-600: #16a34a;
-            --color-green-700: #15803d;
-            --color-black: #000000;
-        }
 
-        .bg-gradient {
-            background: 
-                radial-gradient(circle at top right, rgba(21, 128, 61, 0.15), transparent 40%),
-                radial-gradient(circle at bottom left, rgba(22, 163, 74, 0.12), transparent 40%),
-                #000000;
-        }
+    /* Landing */
+:root {
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-black: #000000;
+  }
+.bg-gradient {
+  background: 
+  radial-gradient(circle at top right, rgba(21, 128, 61, 0.15), transparent 40%),
+  radial-gradient(circle at bottom left, rgba(22, 163, 74, 0.12), transparent 40%),
+  #000000;
+}
+.text-gradient {
+  background-image: linear-gradient(to right, var(--color-green-600), var(--color-green-700));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.btn-gradient {
+  background: linear-gradient(to bottom, var(--color-green-600), var(--color-green-700));
+}
+.scroll-ball {
+  animation: scroll 2s infinite;
+}
+@keyframes scroll {
+  0%, 20% { transform: translateY(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(20px); opacity: 0; }
+}
+/* Zusätzliche Glasmorphism-Effekte für moderne Optik */
+  .glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-        .text-gradient {
-            background-image: linear-gradient(to right, var(--color-green-600), var(--color-green-700));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .btn-gradient {
-            background: linear-gradient(to bottom, var(--color-green-600), var(--color-green-700));
-        }
-
-        .scroll-ball {
-            animation: scroll 2s infinite;
-        }
-
-        @keyframes scroll {
-            0%, 20% { transform: translateY(0); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateY(20px); opacity: 0; }
-        }
-
-        /* Zusätzliche Glasmorphism-Effekte für moderne Optik */
-        .glass-effect {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
 </style>
 </head>
 
@@ -248,14 +204,13 @@
   Text: white second:gray-300 underheadline:gray-200
  -->
 
-
     
     <!-- Navbar -->
 <nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 md:bg-transparent z-1000 flex items-center justify-between px-8 py-4 shadow transition-all duration-500">
 
     <div class="z-[1000]"><img class="h-9 mb-1 mr-[30.32px] lg:mr-[90.32px] w-auto" src="Slice_13-removebg-preview (1).png" alt=""></div>
 
-    <ul class="nav-links flex md:opacity-100 md:visible md:flex-row md:w-auto md:relative md:top-0 md:left-auto opacity-0 invisible flex-col w-full absolute top-[40px] left-0 bg-gray-800 md:bg-transparent rounded-b-2xl md:p-0 z-500 gap-x-[35px] gap-y-[5px] text-white text-lg font-medium transition-all duration-500">
+    <ul class="nav-links flex md:opacity-100 md:visible md:flex-row md:w-auto md:relative md:top-0 md:left-auto opacity-0 invisible flex-col w-full absolute top-[40px] left-0 bg-gray-800   md:bg-transparent rounded-b-2xl md:p-0 z-500 gap-x-[35px] gap-y-[5px] text-white text-lg font-medium transition-all duration-500">
         <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Home</a></li>
         <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">About</a></li>
         <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Services</a></li>
@@ -272,6 +227,7 @@
     </div>
 </nav>
 
+    <!-- Hero -->
 <section class="relative h-screen w-full overflow-hidden">
         <!-- Dual Gradient Background -->
         <div class="absolute inset-0 bg-gradient filter blur-xl opacity-90 z-0"></div>
@@ -350,7 +306,7 @@
     </div>
 </div>
 
-        <!-- Service -->
+    <!-- Service -->
 <section class="py-20 bg-[#030303]">
     <div class="max-w-7xl mx-auto px-4">
         <h1 class="text-4xl font-semibold text-center mb-10 text-white relative">
@@ -396,7 +352,7 @@
 </section>
 
 
-<!-- Team -->
+    <!-- Team -->
 <section class="py-20 bg-[#00000]">
   <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center">
     <h1 class="text-4xl font-semibold text-center mb-2 text-white relative">
@@ -798,7 +754,7 @@
 
     function updateLine() {
         const { top, height } = container.getBoundingClientRect();
-        const offset = Math.min(Math.max(window.innerHeight / 2 - top, 0), height);
+        const offset = Math.min(Math.max(window.innerHeight / 1.2 - top, 0), height);
         const p = (offset / height) * 100;
         if (p > percent || window.scrollY > lastY) line.style.height = `${(percent = p)}%`;
         lastY = window.scrollY;
@@ -817,7 +773,7 @@
             }, 300);
         }
         }),
-        { rootMargin: "-15% 0% -50%", threshold: [0.1] }
+        { rootMargin: "-15% 0% -20%", threshold: [0.1] }
     );
 
     let timeout;
