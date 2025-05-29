@@ -17,7 +17,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 500vh;
     background-image: 
     linear-gradient(rgba(49, 107, 53, 0.7) 1px, transparent 1px),
     linear-gradient(90deg, rgba(49, 107, 53, 0.7) 1px, transparent 1px);
@@ -792,6 +791,10 @@
 </footer>
 
 <script> 
+    // Body
+    const pageHeight = document.documentElement.scrollHeight;
+    document.querySelector('.grid-background ').style.height = `${pageHeight}px`;
+
     // Navbar
     const navbar = document.getElementById('navbar');
     const navLinks = document.querySelector('.nav-links');
