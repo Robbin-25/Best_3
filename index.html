@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company</title>
-     <link rel="stylesheet" href="output.css">
+     <link rel="stylesheet" href="../dist/output.css">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
@@ -19,14 +19,13 @@
     width: 100%;
     min-height: 500vh;
     background-image: 
-    linear-gradient(rgba(26, 25, 25, 0.623) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(18, 19, 18, 0.555) 1px, transparent 1px);
-    background-size: 80px 80px;
+    linear-gradient(rgba(49, 107, 53, 0.7) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(49, 107, 53, 0.7) 1px, transparent 1px);
+    background-size: 50px 50px;
     opacity: 0.3;
     z-index: -1;
    
 }
-
 ::selection {
     background-color: var(--color-green-950);
     color: white;
@@ -64,7 +63,6 @@
 .nav-hamburger.active .nav-bar:nth-child(3) {
     transform: translateY(-11px) rotate(135deg);
 }
-
 @keyframes scrollAnimation {
     0% {
         top: 0px;
@@ -239,8 +237,26 @@
 
 <!--  
   Green: 600 hover:700
-  Gray: 950 second:800 border:700 
-  Text: white second:gray-300 underheadline:gray-200
+
+  Gray: 950 
+  Gray2:800 
+  border:700 
+
+  Text: white  
+  Underheadline:gray-200
+  Text2:gray-300 
+ 
+  Cards: rounded-lg rounded-xl rounded-2xl
+
+  h1: text-2xl sm:text-3xl md:text-4xl font-bold
+  h2: text-xl sm:text-2xl md:text-3xl font-semibold
+  h3: text-lg sm:text-xl md:text-2xl font-medium
+  h4: text-base sm:text-lg md:text-xl font-medium
+  p: text-sm sm:text-base md:text-lg leading-relaxed
+  p2: text-xs sm:text-sm md:text-base leading-relaxed
+
+  button: text-sm sm:text-base md:text-lg font-semibold py-3 px-6 rounded-xl
+  button2: text-xs sm:text-sm md:text-base font-semibold py-3 px-6 rounded-xl	
  -->
 
     
@@ -254,10 +270,10 @@
         <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">About</a></li>
         <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Services</a></li>
         <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Contact</a></li>
-        <li class="block md:hidden ml-6 mt-2 w-min min-w-34 text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded-xl transition">Get in Touch</li>
+        <li class="block md:hidden ml-6 mt-2 w-min min-w-34 text-white bg-green-600 hover:bg-green-700 font-medium px-4 py-2 rounded-xl transition">Get in Touch</li>
     </ul>
 
-    <button class="hidden md:block text-white bg-green-600 hover:bg-green-700 px-5 py-2 rounded-xl transition">Get in Touch</button>
+    <button class="hidden md:block text-white bg-green-600 hover:bg-green-700 font-medium px-4 py-2 rounded-xl transition">Get in Touch</button>
 
     <div class="nav-hamburger md:hidden flex flex-col cursor-pointer w-[32px] h-[25px] justify-between transition-all duration-300 z-1000" onclick="toggleMenu()">
       <div class="nav-bar bg-white w-[32px] h-[3px] transition-all duration-300 rounded-[1px]"></div>
@@ -269,27 +285,27 @@
     <!-- Hero -->
 <section class="relative h-screen w-full overflow-hidden">
         <!-- Dual Gradient Background -->
-     
+        <div class="absolute inset-0 bg-gradient filter blur-xl opacity-90 z-0"></div>
         
         <!-- Content -->
         <div class="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8">
-            <h2 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-6">
+            <h1 class=" text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mb-4 md:mb-6">
                 <span class="text-gradient">Modern Websites</span> 
                 <br class="hidden sm:block"> 
                 That Mean Business
-            </h2>
+            </h1>
             
-            <p class="text-gray-200 text-lg md:text-xl text-center mb-8 max-w-2xl">
+            <h4 class="text-base sm:text-lg md:text-xl font-medium text-gray-200 text-center mb-8 max-w-2xl">
                 We craft sleek, lightning-fast websites that captivate your audience and 
                 <br class="hidden md:block"> 
                 deliver seamless experiences on every device.
-            </p>
+            </h4>
             
             <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-600/30">
+                <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl text-sm sm:text-base md:text-lg font-semibold transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-600/30">
                     Contact Us →
                 </button>
-                <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-green-600 transition transform hover:-translate-y-0.5 hover:bg-green-600/10">
+                <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl text-sm sm:text-base md:text-lg font-semibold border border-green-600 transition transform hover:-translate-y-0.5 hover:bg-green-600/10">
                     Learn About Us
                 </button>
             </div>
@@ -302,10 +318,10 @@
     </section> 
 
     <!--  Editor  -->
-    <div class="leading-relaxed">
+  <div class="leading-relaxed">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <section class="py-12 md:py-24 flex flex-col items-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-3 text-white text-center">About Us</h2>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-white text-center">About Us</h1>
             <div class="h-1 w-20 md:w-20 rounded-[1px] bg-green-600"></div>
 
             <!-- Frühere Umgruppierung von flex-col zu flex-row (sm statt md) -->
@@ -325,18 +341,18 @@
 
                 <!-- ABOUT TEXT UND SKILLS -->
                 <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
-                    <h3 class="text-2xl lg:text-3xl font-semibold mb-4 lg:mb-8 text-white">Passionate Web Developer</h3>
+                    <h2 class="text-xl sm:text-1xl md:text-3xl font-semibold mb-4 lg:mb-8 text-white">Passionate Web Developer</h2>
                     <div id="portfolio-aboutDescription">
-                        <p class="mb-6 text-lg lg:text-xl text-gray-300 leading-relaxed">
+                        <p class=" text-sm sm:text-base md:text-lg leading-relaxed mb-6 text-gray-300">
                             We are a passionate web development duo dedicated to building modern, clean, and user-friendly websites. Combining our skills and creativity, we deliver tailored digital solutions that help businesses grow and stand out online.
                         </p>
                         <div class="mt-6 lg:mt-10">
-                            <h4 class="text-xl lg:text-2xl mb-4 lg:mb-6 text-gray-200">My Skills</h4>
+                            <h4 class="text-base sm:text-lg md:text-xl font-medium mb-4 lg:mb-6 text-gray-200">My Skills</h4>
                             <div class="flex flex-wrap gap-2 lg:gap-3">
-                                <span class="bg-green-700 text-gray-200 px-4 lg:px-6 py-2 rounded-full text-base lg:text-lg font-medium mb-2">HTML</span>
-                                <span class="bg-green-700 text-gray-200 px-4 lg:px-6 py-2 rounded-full text-base lg:text-lg font-medium mb-2">CSS</span>
-                                <span class="bg-green-700 text-gray-200 px-4 lg:px-6 py-2 rounded-full text-base lg:text-lg font-medium mb-2">JavaScript</span>
-                                <span class="bg-green-700 text-gray-200 px-4 lg:px-6 py-2 rounded-full text-base lg:text-lg font-medium mb-2">React</span>
+                                <span class="bg-green-700 text-gray-200 px-4 lg:px-6 py-2 rounded-full text-xs sm:text-sm md:text-base font-semibold mb-2">HTML</span>
+                                <span class="bg-green-700 text-gray-200 px-4 lg:px-6 py-2 rounded-full text-xs sm:text-sm md:text-base font-semibold mb-2">CSS</span>
+                                <span class="bg-green-700 text-gray-200 px-4 lg:px-6 py-2 rounded-full text-xs sm:text-sm md:text-base font-semibold mb-2">JavaScript</span>
+                                <span class="bg-green-700 text-gray-200 px-4 lg:px-6 py-2 rounded-full text-xs sm:text-sm md:text-base font-semibold mb-2">React</span>
                             </div>
                         </div>
                     </div>
@@ -344,12 +360,12 @@
             </div>
         </section>
     </div>
-</div>
+  </div>
 
     <!-- Service -->
 <section class="py-20">
     <div class="max-w-7xl mx-auto px-4">
-        <h1 class="text-4xl font-semibold text-center mb-10 text-white relative">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 text-white relative">
             Why Our Service is
             <span class="block w-20 h-1 bg-gradient-to-r rounded-[1px] from-green-600 to-green-700 mx-auto mt-4"></span>
         </h1>
@@ -360,8 +376,8 @@
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-gray-800 rounded-xl mb-3">
                     <i class="fa-solid fa-code text-white text-2xl"></i>
                 </div>
-                <h1 class="text-xl font-semibold mt-3 mb-2">Clean, Efficient Code</h1>
-                <p class="text-gray-300 text-base leading-relaxed mb-3">
+                <h4 class="text-base sm:text-lg md:text-xl font-medium mt-3 mb-2">Clean, Efficient Code</h4>
+                <p class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300 mb-3">
                     We deliver modern, maintainable code using the latest technologies to ensure your website is fast, reliable, and scalable
                 </p>
             </div>
@@ -371,8 +387,8 @@
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-gray-800 rounded-xl mb-3">
                     <i class="fa-brands fa-figma text-white text-2xl"></i>
                 </div>
-                <h1 class="text-xl font-semibold mt-3 mb-2">Custom UI/UX Design</h1>
-                <p class="text-gray-300 text-base leading-relaxed mb-3">
+                <h4 class="text-base sm:text-lg md:text-xl font-medium mt-3 mb-2">Custom UI/UX Design</h4>
+                <p class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300 mb-3">
                     We create visually stunning and user-friendly designs tailored to your brand that drive engagement and conversions.
                 </p>
             </div>
@@ -382,8 +398,8 @@
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-gray-800 rounded-xl mb-3">
                     <i class="fa-solid fa-mobile-screen text-white text-2xl"></i>
                 </div>
-                <h1 class="text-xl font-semibold mt-3 mb-2">Mobile-First Approach</h1>
-                <p class="text-gray-300 text-base leading-relaxed mb-3">
+                <h4 class="text-base sm:text-lg md:text-xl font-medium mt-3 mb-2">Mobile-First Approach</h4>
+                <p class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300 mb-3">
                     Your site will perform flawlessly on all devices, providing an intuitive experience with responsive design and optimized speed.
                 </p>
             </div>
@@ -401,17 +417,17 @@
                     Meet the <span class="text-gradient">Creators</span>
                     <br class="hidden sm:block">Behind the Code
                 </h1>
-                <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                <h3 class="text-lg sm:text-xl md:text-2xl font-medium text-gray-300 max-w-2xl mx-auto leading-relaxed">
                     A passionate duo turning innovative ideas into extraordinary digital experiences
-                </p>
+                </h3>
             </div>
             
             <!-- Action Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-20">
-                <button class="btn-gradient text-white py-4 px-8 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105">
+            <div class="flex flex-col sm:flex-row items-center gap-4 justify-center mb-20">
+                <button class="btn-gradient text-white py-3 px-6 rounded-xl w-min min-w-[160px] text-xs sm:text-sm md:text-base font-semibold transition-all duration-300 hover:scale-105">
                     Get In Touch →
                 </button>
-                <button class="bg-transparent text-white py-4 px-8 rounded-2xl font-semibold text-lg border-2 border-gray-600 hover:border-green-500 transition-all duration-300 hover:bg-green-500/10 hover:scale-105">
+                <button class="bg-transparent text-white py-3 px-6 rounded-xl w-min min-w-[210px] text-xs sm:text-sm md:text-base font-semibold border-2 border-gray-600 hover:border-green-500 transition-all duration-300 hover:bg-green-500/10 hover:scale-105">
                     Learn More About Us
                 </button>
             </div>
@@ -419,7 +435,7 @@
             <!-- Team Cards -->
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Max Musterman -->
-                <div class="card-glow rounded-3xl p-8 transition-all duration-500 group cursor-pointer">
+                <div class="card-glow rounded-2xl p-8 transition-all duration-500 group cursor-pointer">
                     <div class="flex flex-col items-center text-center space-y-6">
                         <!-- Profile Picture Placeholder -->
                         <div class="profile-image w-32 h-32 rounded-full transition-all duration-300 flex items-center justify-center">
@@ -430,16 +446,16 @@
                         
                         <!-- Name & Title -->
                         <div class="space-y-3">
-                            <h2 class="text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
+                            <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-white group-hover:text-green-400 transition-colors duration-300">
                                 Max Musterman
                             </h2>
                             <div class="role-badge rounded-full py-2 px-4">
-                                <span class="text-green-400 font-medium">Frontend Developer & UI/UX Designer</span>
+                                <p class="text-sm sm:text-base md:text-lg leading-relaxed text-green-400">Frontend Developer & UI/UX Designer</p>
                             </div>
                         </div>
                         
                         <!-- Description -->
-                        <p class="text-gray-300 leading-relaxed max-w-sm">
+                        <p class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300 max-w-sm">
                             Transforms complex ideas into intuitive user interfaces and creates digital experiences that inspire and delight.
                         </p>
                         
@@ -453,7 +469,7 @@
                 </div>
                 
                 <!-- Erika Musterman -->
-                <div class="card-glow rounded-3xl p-8 transition-all duration-500 group cursor-pointer">
+                <div class="card-glow rounded-2xl p-8 transition-all duration-500 group cursor-pointer">
                     <div class="flex flex-col items-center text-center space-y-6">
                         <!-- Profile Picture Placeholder -->
                         <div class="profile-image w-32 h-32 rounded-full transition-all duration-300 flex items-center justify-center">
@@ -464,16 +480,16 @@
                         
                         <!-- Name & Title -->
                         <div class="space-y-3">
-                            <h2 class="text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
+                            <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-white group-hover:text-green-400 transition-colors duration-300">
                                 Erika Musterman
                             </h2>
                             <div class="role-badge rounded-full py-2 px-4">
-                                <span class="text-green-400 font-medium">Full Stack Developer & Problem Solver</span>
+                                <p class="text-sm sm:text-base md:text-lg leading-relaxed text-green-400">Full Stack Developer & Problem Solver</p>
                             </div>
                         </div>
                         
                         <!-- Description -->
-                        <p class="text-gray-300 leading-relaxed max-w-sm">
+                        <p class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300 max-w-sm">
                             Builds robust backend systems and solves complex technical challenges with elegance and precision.
                         </p>
                         
@@ -489,8 +505,8 @@
             
             <!-- Bottom CTA -->
             <div class="text-center mt-16">
-                <p class="text-gray-400 mb-6">Ready for your next project?</p>
-                <button class="btn-gradient text-white py-3 px-6 rounded-xl font-medium transition-all duration-300 hover:scale-105">
+                <p class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-400 mb-6">Ready for your next project?</p>
+                <button class="btn-gradient text-white text-xs sm:text-sm md:text-base font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105">
                     Let's Talk
                 </button>
             </div>
@@ -503,19 +519,19 @@
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
                 The Questions We Get <span class="text-green-600">Asked</span>
             </h1>
-            <p class="text-base sm:text-xl mb-8 text-gray-200 text-center">Let’s wipe the fog off the glass and get a sharp, focused view of what’s really going on</p>
+            <h3 class="text-lg sm:text-xl md:text-2xl font-medium mb-8 text-gray-200 text-center">Let’s clear things up for you</h3>
 
             <div class="bg-gray-950 rounded-xl border border-gray-700 shadow-md p-6 lg:p-8 px-6 space-y-4">
                 <!-- FAQ Item -->
                 <div class="border-b border-gray-700 pb-3">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(this)">
-                        <h2 class="text-lg text-gray-200 sm:text-xl font-medium">Who are we, really?</h2>
+                        <h4 class="text-sm sm:text-lg md:text-xl font-medium text-gray-200">Who are we, really?</h4>
                         <div class="relative w-5 h-5 px-7">
                             <div class="line1 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 rotate-45 -translate-x-[5.5px]"></div>
                             <div class="line2 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 -rotate-45 translate-x-[5.5px]"></div>
                         </div>
                     </div>
-                    <div class="faq-answer ml-2 mr-10 max-h-0 overflow-hidden opacity-0 text-sm sm:text-lg text-gray-300 transition-all duration-500">
+                    <div class="faq-answer ml-2 mr-10 max-h-0 overflow-hidden opacity-0 text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 transition-all duration-500">
                         We’re a team of two passionate web developers creating custom websites tailored to your business needs.
                     </div>
                 </div>
@@ -523,13 +539,13 @@
                 <!-- FAQ Item2 -->
                 <div class="border-b border-gray-700 pb-3">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(this)">
-                        <h2 class="text-lg text-gray-200 sm:text-xl font-medium">How can I get in touch?</h2>
+                        <h2 class="text-sm sm:text-lg md:text-xl font-medium text-gray-200">How can I get in touch?</h2>
                         <div class="relative w-5 h-5 px-7">
                             <div class="line1 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 rotate-45 -translate-x-[5.5px]"></div>
                             <div class="line2 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 -rotate-45 translate-x-[5.5px]"></div>
                         </div>
                     </div>
-                    <div class="faq-answer ml-2 mr-10 max-h-0 overflow-hidden opacity-0 text-sm sm:text-lg text-gray-300 transition-all duration-500">
+                    <div class="faq-answer ml-2 mr-10 max-h-0 overflow-hidden opacity-0 text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 transition-all duration-500">
                         Feel free to reach out via email or use our contact form — we’re quick to respond.
                     </div>
                 </div>
@@ -537,13 +553,13 @@
                 <!-- FAQ Item3 -->
                 <div class="border-b border-gray-700 pb-3">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(this)">
-                        <h2 class="text-lg text-gray-200 sm:text-xl font-medium">Does my business need to be successful first?</h2>
+                        <h2 class="text-sm sm:text-lg md:text-xl font-medium text-gray-200">Does my business need to be successful first?</h2>
                         <div class="relative w-5 h-5 px-7">
                             <div class="line1 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 rotate-45 -translate-x-[5.5px]"></div>
                             <div class="line2 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 -rotate-45 translate-x-[5.5px]"></div>
                         </div>
                     </div>
-                    <div class="faq-answer ml-2 mr-10 max-h-0 overflow-hidden opacity-0 text-sm sm:text-lg text-gray-300 transition-all duration-500">
+                    <div class="faq-answer ml-2 mr-10 max-h-0 overflow-hidden opacity-0 text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 transition-all duration-500">
                         Not at all. We build websites for both small startups and established companies.
                     </div>
                 </div>
@@ -551,13 +567,13 @@
                 <!-- Serhat4 -->
                 <div class="border-b border-gray-700 pb-3">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(this)">
-                        <h2 class="text-lg text-gray-200 sm:text-xl font-medium">What can I expect from your websites?</h2>
+                        <h2 class="text-sm sm:text-lg md:text-xl font-medium text-gray-200">What can I expect from your websites?</h2>
                         <div class="relative w-5 h-5 px-7">
                             <div class="line1 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 rotate-45 -translate-x-[5.5px]"></div>
                             <div class="line2 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 -rotate-45 translate-x-[5.5px]"></div>
                         </div>
                     </div>
-                    <div class="faq-answer ml-2 mr-10 max-h-0 overflow-hidden opacity-0 text-sm sm:text-lg text-gray-300 transition-all duration-500">
+                    <div class="faq-answer ml-2 mr-10 max-h-0 overflow-hidden opacity-0 text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 transition-all duration-500">
                         Modern, high-quality designs that engage your audience and elevate your brand online.
                     </div>
                 </div>
@@ -568,18 +584,18 @@
 
     <!-- Timeline -->
     <section id="timeline" class="py-20 px-4">
-      <h2 class="text-center text-4xl font-bold mb-20">Our Story So Far</h2>
+      <h1 class="text-center text-2xl sm:text-3xl md:text-4xl font-bold mb-20">Our Story So Far</h1>
     
       <div class="relative max-w-5xl mx-auto timeline-line" id="timelineLineContainer">
-        <div id="timelineLine" class="absolute left-10 md:left-1/2 top-0 w-1 bg-gradient-to-b rounded from-0% to-green-600 z-0" style="transform: translateX(-50%); height: 0;"></div>
+        <div id="timelineLine" class="absolute left-10 md:left-1/2 top-0 w-1 bg-gradient-to-b rounded-full from-0% to-green-600 z-0" style="transform: translateX(-50%); height: 0;"></div>
 
         <div class="space-y-32">
           <!-- Step Template -->
           <div class="timeline-step flex flex-row-reverse md:flex-row items-center relative z-10">
             <div class="md:w-1/2 text-left md:text-right">
-              <div class="text-3xl text-green-700 mb-2">2023</div>
-              <div class="font-bold text-xl">The First Lines of Code</div>
-              <p class="text-gray-300 mt-2 mr-[10vw] md:mr-auto">
+              <div class="text-xl sm:text-2xl md:text-3xl font-semibold text-green-700 mb-2">2023</div>
+              <h3 class="text-lg sm:text-xl md:text-2xl font-medium">The First Lines of Code</h3>
+              <p class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 mt-2 mr-[10vw] md:mr-auto">
                 I started exploring web development and immediately fell in love with it. I began learning the fundamentals: HTML, CSS, and JavaScript.
               </p>
             </div>
@@ -595,9 +611,9 @@
               <i class="fas fa-user-friends"></i>
             </div>
             <div class="md:w-1/2 text-left">
-              <div class="text-3xl text-green-700 mb-2">2024</div>
-              <div class="font-bold text-xl">A Coding Partner Joins</div>
-              <p class="text-gray-300 mt-2 mr-[10vw] md:mr-auto">
+              <div class="text-xl sm:text-2xl md:text-3xl font-semibold text-green-700 mb-2">2024</div>
+              <div class="text-lg sm:text-xl md:text-2xl font-medium">A Coding Partner Joins</div>
+              <p class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 mt-2 mr-[10vw] md:mr-auto">
                 My partner jumped into the world of coding and quickly picked it up. Together, we pushed each other to learn more and build better..
               </p>
             </div>
@@ -605,9 +621,9 @@
 
           <div class="timeline-step flex flex-row-reverse md:flex-row items-center relative z-10">
             <div class="md:w-1/2 text-left md:text-right">
-              <div class="text-3xl text-green-700 mb-2">2025</div>
-              <div class="font-bold text-xl">Real Projects, Real Growth</div>
-              <p class="text-gray-300 mt-2 mr-[10vw] md:mr-auto">
+              <div class="text-xl sm:text-2xl md:text-3xl font-semibold text-green-700 mb-2">2025</div>
+              <div class="text-lg sm:text-xl md:text-2xl font-medium">Real Projects, Real Growth</div>
+              <p class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 mt-2 mr-[10vw] md:mr-auto">
                 We started building websites for friends and family. It was our first step into real-world projects — and the beginning of something bigger.
               </p>
             </div>
@@ -623,9 +639,9 @@
               <i class="fas fa-cogs"></i>
             </div>
             <div class="md:w-1/2 text-left">
-              <div class="text-3xl text-green-700 mb-2">2025</div>
-              <div class="font-bold text-xl">Launching Our Business</div>
-              <p class="text-gray-300 mt-2 mr-[10vw] md:mr-auto">
+              <div class="text-xl sm:text-2xl md:text-3xl font-semibold text-green-700 mb-2">2025</div>
+              <div class="text-lg sm:text-xl md:text-2xl font-medium">Launching Our Business</div>
+              <p class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 mt-2 mr-[10vw] md:mr-auto">
                 We officially founded our web development company and began working on professional client projects.
               </p>
             </div>
@@ -638,102 +654,102 @@
     <!-- Contact -->
 <div class="min-h-screen flex flex-col items-center justify-center p-4 mobile-section">
   <div class="text-center mb-8">
-    <h2 class="text-3xl font-bold text-white">Get in Touch</h2>
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">Get in Touch</h2>
     <div class="mx-auto mt-2 h-1 w-24 bg-gradient-to-r rounded-[1px] from-green-600 to-green-700"></div>
   </div>
   
   <div class="mobile-container w-full max-w-5xl flex flex-col md:flex-row gap-6">
     
     <!-- Contact Info -->
-    <div class="bg-gray-950 border border-gray-700 rounded-lg p-6 md:w-1/3 shadow-lg relative overflow-hidden mobile-container">
+    <div class="bg-gray-950 border border-gray-700 rounded-xl p-6 md:w-1/3 shadow-lg relative overflow-hidden mobile-container">
       <div class="purple-glow"></div>
       <div class="purple-glow" style="top: auto; right: auto; bottom: -50px; left: -50px;"></div>
       <div class="relative z-10">
-        <h3 class="text-xl font-semibold text-white section-title">Contact Info</h3>
-        <p class="text-gray-300 mb-6">
+        <h3 class="text-lg sm:text-xl md:text-2xl font-medium text-white section-title">Contact Info</h3>
+        <p class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300 mb-6">
           Reach out anytime! We aim to respond within 24 hours on business days.
         </p>
         
         <div class="space-y-4">
           <div class="flex items-center gap-3">
-            <div class="bg-gray-800 rounded-lg p-3 border border-gray-700">
+            <div class="bg-gray-800 rounded-xl p-3 border border-gray-700">
               <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
               </svg>
             </div>
-            <span class="text-gray-300">Email</span>
+            <span class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300">Email</span>
           </div>
           
           <div class="flex items-center gap-3">
-            <div class="bg-gray-800 rounded-lg p-3 border border-gray-700">
+            <div class="bg-gray-800 rounded-xl p-3 border border-gray-700">
               <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
               </svg>
             </div>
-            <span class="text-gray-300">Phone</span>
+            <span class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300">Phone</span>
           </div>
           
           <div class="flex items-center gap-3">
-            <div class="bg-gray-800 rounded-lg p-3 border border-gray-700">
+            <div class="bg-gray-800 rounded-xl p-3 border border-gray-700">
               <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
               </svg>
             </div>
-            <span class="text-gray-300">Location</span>
+            <span class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300">Location</span>
           </div>
         </div>
       </div>
     </div>
     
     <!-- Contact Form -->
-    <div class="bg-gray-950 border border-gray-700 rounded-lg p-6 md:w-2/3 shadow-lg mobile-container">
-      <h3 class="text-xl font-semibold text-white section-title">Send Us a Message</h3>
+    <div class="bg-gray-950 border border-gray-700 rounded-xl p-6 md:w-2/3 shadow-lg mobile-container">
+      <h3 class="text-lg sm:text-xl md:text-2xl font-medium text-white section-title">Send Us a Message</h3>
       <form id="contactForm" class="space-y-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label for="fullName" class="text-gray-300 text-sm">Full Name</label>
+            <label for="fullName" class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300">Full Name</label>
             <input
               type="text"
               id="fullName"
               name="fullName"
-              class="w-full bg-gray-800 border border-gray-700 rounded-md p-2 mt-1 text-gray-200 focus:outline-none focus:ring-2 focus:ring-green-700"
+              class="w-full bg-gray-800 border border-gray-700 rounded-lg p-2 mt-1 text-gray-200 focus:outline-none focus:ring-2 focus:ring-green-700"
               required
             />
           </div>
           <div>
-            <label for="email" class="text-gray-300 text-sm">Email</label>
+            <label for="email" class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300">Email</label>
             <input
               type="email"
               id="email"
               name="email"
-              class="w-full bg-gray-800 border border-gray-700 rounded-md p-2 mt-1 text-gray-200 focus:outline-none focus:ring-2 focus:ring-green-700"
+              class="w-full bg-gray-800 border border-gray-700 rounded-lg p-2 mt-1 text-gray-200 focus:outline-none focus:ring-2 focus:ring-green-700"
               required
             />
           </div>
         </div>
         <div>
-          <label for="subject" class="text-gray-300 text-sm">Subject</label>
+          <label for="subject" class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300">Subject</label>
           <input
             type="text"
             id="subject"
             name="subject"
-            class="w-full bg-gray-800 border border-gray-700 rounded-md p-2 mt-1 text-gray-200 focus:outline-none focus:ring-2 focus:ring-green-700"
+            class="w-full bg-gray-800 border border-gray-700 rounded-lg p-2 mt-1 text-gray-200 focus:outline-none focus:ring-2 focus:ring-green-700"
           />
         </div>
         <div>
-          <label for="message" class="text-gray-300 text-sm">Your Message</label>
+          <label for="message" class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300">Your Message</label>
           <textarea
             id="message"
             name="message"
             rows="4"
-            class="w-full bg-gray-800 border border-gray-700 rounded-md p-2 mt-1 text-gray-200 focus:outline-none focus:ring-2 focus:ring-green-700"
+            class="w-full bg-gray-800 border border-gray-700 rounded-lg p-2 mt-1 text-gray-200 focus:outline-none focus:ring-2 focus:ring-green-700"
             required
           ></textarea>
         </div>
         <button 
           type="submit" 
-          class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md transition duration-200">
+          class="bg-green-600 hover:bg-green-700 text-white text-xs sm:text-sm md:text-base font-semibold py-2 px-4 rounded-xl transition duration-200">
           Send Message
         </button>
       </form>
@@ -746,21 +762,21 @@
 <footer class="bg-[#0c0c0c] text-white px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-16 2xl:py-16 grid gap-8 justify-items-center text-center">
 
     <div class="grid grid-cols-4 grid-rows-1 gap-3 sm:gap-8 md:gap-10 lg:gap-12">
-      <a href="#" class="bg-gray-950 w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-lg sm:rounded-xl text-2xl lg:text-3xl border border-gray-700 transition-transform duration-300 hover:scale-110">
+      <a href="#" class="bg-gray-950 w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-xl text-2xl lg:text-3xl border border-gray-700 transition-transform duration-300 hover:scale-110">
         <i class="fab fa-github"></i>
       </a>
-      <a href="#" class="bg-gray-950 w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-lg sm:rounded-xl text-2xl lg:text-3xl border border-gray-700 transition-transform duration-300 hover:scale-110">
+      <a href="#" class="bg-gray-950 w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-xl text-2xl lg:text-3xl border border-gray-700 transition-transform duration-300 hover:scale-110">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="#" class="bg-gray-950 w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-lg sm:rounded-xl text-2xl lg:text-3xl border border-gray-700 transition-transform duration-300 hover:scale-110">
+      <a href="#" class="bg-gray-950 w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-xl text-2xl lg:text-3xl border border-gray-700 transition-transform duration-300 hover:scale-110">
         <i class="fas fa-envelope"></i>
       </a>
-      <a href="#" class="bg-gray-950 w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-lg sm:rounded-xl text-2xl lg:text-3xl border border-gray-700 transition-transform duration-300 hover:scale-110">
+      <a href="#" class="bg-gray-950 w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-xl text-2xl lg:text-3xl border border-gray-700 transition-transform duration-300 hover:scale-110">
         <i class="fab fa-tiktok"></i>
       </a>
     </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 text-sm sm:text-base md:text-lg lg:text-xl">
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 text-sm sm:text-base md:text-lg leading-relaxed">
       <a href="#" class="hover:text-green-600">Latest Updates</a>
       <a href="#" class="hover:text-green-600">Meet the Team</a>
       <a href="#" class="hover:text-green-600">Get in Touch</a>
@@ -769,9 +785,9 @@
 
     <hr class="w-11/12 border rounded border-gray-200" />
 
-    <p class="text-xs sm:text-sm md:text-base lg:text-lg text-[#ccc]">  
+    <p class="text-xs sm:text-sm md:text-base leading-relaxed text-[#ccc]">  
         © <span id="year"></span> Designed with care by
-        <a href="#" class="text-green-600 hover:text-green-700">Your Company</a>
+        <a href="#" class="text-green-600 hover:text-green-700">Web-plants</a>
     </p>        
 </footer>
 
