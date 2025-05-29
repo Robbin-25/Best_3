@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company</title>
-     <link rel="stylesheet" href="output.css">
+     <link rel="stylesheet" href="../dist/output.css">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
@@ -12,6 +12,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
     /* Body */
+.grid-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 500vh;
+    background-image: 
+    linear-gradient(rgba(49, 107, 53, 0.493) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(49, 107, 53, 0.509) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+    z-index: -1;
+   
+}
 ::selection {
     background-color: var(--color-green-950);
     color: white;
@@ -65,6 +79,63 @@
 }
 .scroll-ball {
     animation: scrollAnimation 1.5s infinite ease-in-out;
+}
+
+    /* Hero */
+:root {
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-black: #000000;
+  }
+.bg-gradient {
+  background: 
+  radial-gradient(circle at top right, rgba(21, 128, 60, 0.196), transparent 40%),
+  radial-gradient(circle at bottom left, rgba(22, 163, 74, 0.195), transparent 40%),
+  #000000;
+  z-index: -2;
+}
+.text-gradient {
+  background-image: linear-gradient(to right, var(--color-green-600), var(--color-green-700));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.btn-gradient {
+  background: linear-gradient(to bottom, var(--color-green-600), var(--color-green-700));
+}
+.scroll-ball {
+  animation: scroll 2s infinite;
+}
+@keyframes scroll {
+  0%, 20% { transform: translateY(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(20px); opacity: 0; }
+}
+/* Zusätzliche Glasmorphism-Effekte für moderne Optik */
+  .glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+    /* Hintergund - Karten Effekt */
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.card-glow {
+     background: linear-gradient(145deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.6));
+     backdrop-filter: blur(20px);
+     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.profile-image {
+     background: linear-gradient(145deg, #374151, #1f2937);
+     border: 2px solid rgba(16, 185, 129, 0.3);
+}        
+@media (max-width: 768px) {
+    .grid-background { background-size: 30px 30px; }
+    .grid-glow { opacity: 0.6; }
 }
 
     /* Faq */
@@ -156,47 +227,14 @@
     transition: all 0.3s ease;
 }
 
-    /* Landing */
-:root {
-  --color-green-600: #16a34a;
-  --color-green-700: #15803d;
-  --color-black: #000000;
-  }
-.bg-gradient {
-  background: 
-  radial-gradient(circle at top right, rgba(21, 128, 61, 0.15), transparent 40%),
-  radial-gradient(circle at bottom left, rgba(22, 163, 74, 0.12), transparent 40%),
-  #000000;
-}
-.text-gradient {
-  background-image: linear-gradient(to right, var(--color-green-600), var(--color-green-700));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.btn-gradient {
-  background: linear-gradient(to bottom, var(--color-green-600), var(--color-green-700));
-}
-.scroll-ball {
-  animation: scroll 2s infinite;
-}
-@keyframes scroll {
-  0%, 20% { transform: translateY(0); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: translateY(20px); opacity: 0; }
-}
-/* Zusätzliche Glasmorphism-Effekte für moderne Optik */
-  .glass-effect {
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 </style>
 </head>
 
 <body class="bg-black text-white overflow-x-hidden box-border">
 
+    <!-- Grid Background -->
+<div class="grid-background"></div>
+<div class="grid-glow"></div>
 
 <!--  
   Green: 600 hover:700
@@ -208,7 +246,7 @@
     <!-- Navbar -->
 <nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 md:bg-transparent z-1000 flex items-center justify-between px-8 py-4 shadow transition-all duration-500">
 
-    <div class="z-[1000] flex flex-row"><img class="mb-1 mr-[10.63px] h-9 w-auto" src="logotransparent.png" alt=""><h1 class="flex items-center text-lg font-semibold text-[#549B54]">Web-plants</h1></div>
+    <div class="z-[1000] flex flex-row"><img class="mb-1 mr-[10.63px] h-9 w-auto" src="logotransparent.png" alt=""><h1 class="flex items-center text-lg font-semibold text-[#549B54]"><span class="text-white">Web-</span>plants</h1></div>
 
     <ul class="nav-links flex md:opacity-100 md:visible md:flex-row md:w-auto md:relative md:top-0 md:left-auto opacity-0 invisible flex-col w-full absolute top-[40px] left-0 bg-gray-800 md:bg-transparent rounded-b-2xl md:p-0 z-500 gap-x-5 lg:gap-x-10 2xl:gap-x-16 gap-y-1.5 text-white text-lg font-medium transition-all duration-500">
         <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Home</a></li>
@@ -261,8 +299,9 @@
             <div class="scroll-ball w-4 h-4 bg-white rounded-full absolute top-2"></div>
         </div>
     </section> 
-   <!--  Editor  -->
-    <div class="bg-[#000000] leading-relaxed">
+
+    <!--  Editor  -->
+    <div class="leading-relaxed">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <section class="py-12 md:py-24 flex flex-col items-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-3 text-white text-center">About Us</h2>
@@ -307,7 +346,7 @@
 </div>
 
     <!-- Service -->
-<section class="py-20 bg-[#030303]">
+<section class="py-20">
     <div class="max-w-7xl mx-auto px-4">
         <h1 class="text-4xl font-semibold text-center mb-10 text-white relative">
             Why Our Service is
@@ -353,59 +392,109 @@
 
 
     <!-- Team -->
-<section class="py-20 bg-[#00000]">
-  <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center">
-    <h1 class="text-4xl font-semibold text-center mb-2 text-white relative">
-      Meet the <span class="text-gradient font-bold">Creators</span> Behind the Code
-    </h1>
-    <p class="text-lg text-center text-gray-200 relative mb-10">
-      A passionate duo turning ideas into beautiful websites.
-    </p>
-
-    <div class="flex flex-row sm:flex-row gap-5 mb-8 max-w-4xl mx-auto">
-      <button class="btn-gradient cursor-pointer text-white py-3 px-6 rounded-xl font-medium transition transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-600/30">
-        Contact Us →
-      </button>
-      <button class="bg-transparent cursor-pointer text-white py-3 px-6 rounded-xl font-medium border border-green-600 transition transform hover:-translate-y-0.5 hover:bg-green-600/10">
-        Learn About Us
-      </button>
-    </div>
-
-    <div class="w-full flex flex-wrap justify-center gap-9 max-w-4xl mx-auto pr-0">
-
-      <!-- Max Warstädt -->
-      <div class="w-96 p-5 rounded-xl border border-gray-700 bg-gray-950 text-white shadow-md transition-transform duration-300 hover:-translate-y-1 relative overflow-hidden group h-110 cursor-pointer">
-        <div class="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-300"
-          style="background-image: url('bl6.jpg'); z-index: 0;">
+<section class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+                    Meet the <span class="text-gradient">Creators</span>
+                    <br class="hidden sm:block">Behind the Code
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    A passionate duo turning innovative ideas into extraordinary digital experiences
+                </p>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+                <button class="btn-gradient text-white py-4 px-8 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105">
+                    Get In Touch →
+                </button>
+                <button class="bg-transparent text-white py-4 px-8 rounded-2xl font-semibold text-lg border-2 border-gray-600 hover:border-green-500 transition-all duration-300 hover:bg-green-500/10 hover:scale-105">
+                    Learn More About Us
+                </button>
+            </div>
+            
+            <!-- Team Cards -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Max Musterman -->
+                <div class="card-glow rounded-3xl p-8 transition-all duration-500 group cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-6">
+                        <!-- Profile Picture Placeholder -->
+                        <div class="profile-image w-32 h-32 rounded-full transition-all duration-300 flex items-center justify-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
+                                MM
+                            </div>
+                        </div>
+                        
+                        <!-- Name & Title -->
+                        <div class="space-y-3">
+                            <h2 class="text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
+                                Max Musterman
+                            </h2>
+                            <div class="role-badge rounded-full py-2 px-4">
+                                <span class="text-green-400 font-medium">Frontend Developer & UI/UX Designer</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Description -->
+                        <p class="text-gray-300 leading-relaxed max-w-sm">
+                            Transforms complex ideas into intuitive user interfaces and creates digital experiences that inspire and delight.
+                        </p>
+                        
+                        <!-- Skills -->
+                        <div class="flex flex-wrap justify-center gap-2 mt-4">
+                            <span class="bg-gray-800 text-green-400 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-gray-800 text-blue-400 px-3 py-1 rounded-full text-sm">Design</span>
+                            <span class="bg-gray-800 text-purple-400 px-3 py-1 rounded-full text-sm">Animation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Erika Musterman -->
+                <div class="card-glow rounded-3xl p-8 transition-all duration-500 group cursor-pointer">
+                    <div class="flex flex-col items-center text-center space-y-6">
+                        <!-- Profile Picture Placeholder -->
+                        <div class="profile-image w-32 h-32 rounded-full transition-all duration-300 flex items-center justify-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
+                                EM
+                            </div>
+                        </div>
+                        
+                        <!-- Name & Title -->
+                        <div class="space-y-3">
+                            <h2 class="text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
+                                Erika Musterman
+                            </h2>
+                            <div class="role-badge rounded-full py-2 px-4">
+                                <span class="text-green-400 font-medium">Full Stack Developer & Problem Solver</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Description -->
+                        <p class="text-gray-300 leading-relaxed max-w-sm">
+                            Builds robust backend systems and solves complex technical challenges with elegance and precision.
+                        </p>
+                        
+                        <!-- Skills -->
+                        <div class="flex flex-wrap justify-center gap-2 mt-4">
+                            <span class="bg-gray-800 text-green-400 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-gray-800 text-blue-400 px-3 py-1 rounded-full text-sm">Database</span>
+                            <span class="bg-gray-800 text-purple-400 px-3 py-1 rounded-full text-sm">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom CTA -->
+            <div class="text-center mt-16">
+                <p class="text-gray-400 mb-6">Ready for your next project?</p>
+                <button class="btn-gradient text-white py-3 px-6 rounded-xl font-medium transition-all duration-300 hover:scale-105">
+                    Let's Talk
+                </button>
+            </div>
         </div>
-        <div class="flex flex-col justify-between h-full relative z-10">
-          <div class="bg-gray-800 rounded-lg p-4 mx-2 mb-1 absolute bottom-0 left-0 right-0 border-gray-700 border">
-            <h1 class="text-xl font-semibold mb-2">Max Musterman</h1>
-            <p class="text-gray-300 text-base leading-relaxed">
-              Frontend Developer & UI/UX Designer<br>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Max Warstädt -->
-      <div class="w-96 p-5 rounded-xl border border-gray-700 bg-gray-950 text-white shadow-md transition-transform duration-300 hover:-translate-y-1 relative overflow-hidden group h-110 cursor-pointer">
-        <div class="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-300"
-          style="background-image: url('bl5.jpg'); z-index: 0;">
-        </div>
-        <div class="flex flex-col justify-between h-full relative z-10">
-          <div class="bg-gray-800 rounded-lg p-4 mx-2 mb-1 absolute bottom-0 left-0 right-0 border-gray-700 border">
-            <h1 class="text-xl font-semibold mb-2">Erika Musterman</h1>
-            <p class="text-gray-300 text-base leading-relaxed">
-              Full Stack Developer & Problem Solver<br>
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Faq -->
 <section class="flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0 py-24 max-w-6xl mx-auto">
@@ -477,7 +566,7 @@
     
 
     <!-- Timeline -->
-    <section id="timeline" class="py-20 px-4 bg-[#00000]">
+    <section id="timeline" class="py-20 px-4">
       <h2 class="text-center text-4xl font-bold mb-20">Our Story So Far</h2>
     
       <div class="relative max-w-5xl mx-auto timeline-line" id="timelineLineContainer">
@@ -546,7 +635,7 @@
 
 
     <!-- Contact -->
-<div class="bg-[#00000] min-h-screen flex flex-col items-center justify-center p-4 mobile-section">
+<div class="min-h-screen flex flex-col items-center justify-center p-4 mobile-section">
   <div class="text-center mb-8">
     <h2 class="text-3xl font-bold text-white">Get in Touch</h2>
     <div class="mx-auto mt-2 h-1 w-24 bg-gradient-to-r rounded-[1px] from-green-600 to-green-700"></div>
