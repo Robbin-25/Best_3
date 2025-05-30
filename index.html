@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company</title>
-     <link rel="stylesheet" href="output.css">
+     <link rel="stylesheet" href="../dist/output.css">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
@@ -18,10 +18,9 @@
     left: 0;
     width: 100%;
     background-image: 
-    linear-gradient(rgba(49, 107, 53, 0.7) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(49, 107, 53, 0.7) 1px, transparent 1px);
-    background-size: 100px 100px;
-    opacity: 0.3;
+    linear-gradient(rgba(49, 107, 53, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(49, 107, 53, 0.2) 1px, transparent 1px);
+    background-size: 80px 80px;
     z-index: -1;
     height: 100%;
 }
@@ -75,9 +74,6 @@
         opacity: 0.2;
     }
 }
-.scroll-ball {
-    animation: scrollAnimation 1.5s infinite ease-in-out;
-}
 
     /* Hero */
 :root {
@@ -110,19 +106,34 @@
   100% { transform: translateY(20px); opacity: 0; }
 }
 
-    /* Hintergund - Karten Effekt */
-.glass-effect {
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
+  /* Editor */
+.typing-cursor {
+    animation: blink 1s step-end infinite;
 }
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+ }
+.span.text-pink-500 { color: #ec4899; }
+.text-green-400 { color: #4ade80; }
+.text-yellow-300 { color: #fde047; }
+.text-blue-400 { color: #38bdf8; }
+.text-purple-400 { color: #c084fc; }
+.text-orange-400 { color: #fb923c; }                       
+@media (max-width: 800px) {
+    .code-container {
+    height: 300px !important;
+    }
+}                     
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+    /* Hintergund - Karten Effekt */
 .profile-image {
      background: linear-gradient(145deg, #374151, #1f2937);
      border: 2px solid rgba(16, 185, 129, 0.3);
 }        
-@media (max-width: 768px) {
-    .grid-background { background-size: 30px 30px; }
-    .grid-glow { opacity: 0.6; }
-}
 
     /* Faq */
 .faq-active .faq-answer {
@@ -189,28 +200,7 @@
     }
 }
 
-    /* Editor */
-.typing-cursor {
-    animation: blink 1s step-end infinite;
-}
-@keyframes blink {
-    from, to { opacity: 1; }
-    50% { opacity: 0; }
- }
-.span.text-pink-500 { color: #ec4899; }
-.text-green-400 { color: #4ade80; }
-.text-yellow-300 { color: #fde047; }
-.text-blue-400 { color: #38bdf8; }
-.text-purple-400 { color: #c084fc; }
-.text-orange-400 { color: #fb923c; }                       
-@media (max-width: 800px) {
-    .code-container {
-    height: 300px !important;
-    }
-}                     
-.transition-all {
-    transition: all 0.3s ease;
-}
+
 
 </style>
 </head>
@@ -325,7 +315,7 @@
 
                 <!-- ABOUT TEXT UND SKILLS -->
                 <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
-                    <h2 class="text-xl sm:text-1xl md:text-3xl font-semibold mb-4 lg:mb-8 text-white">Passionate Web Developer</h2>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 lg:mb-8 text-white">Passionate Web Developer</h2>
                     <div id="portfolio-aboutDescription">
                         <p class=" text-sm sm:text-base md:text-lg leading-relaxed mb-6 text-gray-300">
                             We are a passionate web development duo dedicated to building modern, clean, and user-friendly websites. Combining our skills and creativity, we deliver tailored digital solutions that help businesses grow and stand out online.
@@ -360,7 +350,7 @@
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-gray-800 rounded-xl mb-3">
                     <i class="fa-solid fa-code text-white text-2xl"></i>
                 </div>
-                <h4 class="text-base sm:text-lg md:text-xl lg:text-2xl font-medium mt-3 mb-2">Clean, Efficient Code</h4>
+                <h3 class="text-lg sm:text-xl md:text-2xl font-medium mt-3 mb-2">Clean, Efficient Code</h3>
                 <p class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300 mb-3">
                     We deliver modern, maintainable code using the latest technologies to ensure your website is fast, reliable, and scalable
                 </p>
@@ -371,7 +361,7 @@
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-gray-800 rounded-xl mb-3">
                     <i class="fa-brands fa-figma text-white text-2xl"></i>
                 </div>
-                <h4 class="text-base sm:text-lg md:text-xl lg:text-2xl font-medium mt-3 mb-2">Custom UI/UX Design</h4>
+                <h3 class="text-lg sm:text-xl md:text-2xl font-medium mt-3 mb-2">Custom UI/UX Design</h3>
                 <p class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300 mb-3">
                     We create visually stunning and user-friendly designs tailored to your brand that drive engagement and conversions.
                 </p>
@@ -382,7 +372,7 @@
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-gray-800 rounded-xl mb-3">
                     <i class="fa-solid fa-mobile-screen text-white text-2xl"></i>
                 </div>
-                <h4 class="text-base sm:text-lg md:text-xl lg:text-2xl font-medium mt-3 mb-2">Mobile-First Approach</h4>
+                <h3 class="text-lg sm:text-xl md:text-2xl font-medium mt-3 mb-2">Mobile-First Approach</h3>
                 <p class="text-xs sm:text-sm md:text-base leading-relaxed text-gray-300 mb-3">
                     Your site will perform flawlessly on all devices, providing an intuitive experience with responsive design and optimized speed.
                 </p>
@@ -507,10 +497,10 @@
 
             <div class="bg-gray-950 rounded-xl border border-gray-700 shadow-md p-6 lg:p-8 px-6 space-y-4">
                 <!-- FAQ Item -->
-                <div class="border-b border-gray-700 pb-3">
+                <div class="border-b border-gray-700 pb-4">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(this)">
                         <h4 class="text-sm sm:text-lg md:text-xl font-medium text-gray-200">Who are we, really?</h4>
-                        <div class="relative w-5 h-5 px-7">
+                        <div class="relative w-5 h-5 px-7 translate-y-[10px]">
                             <div class="line1 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 rotate-45 -translate-x-[5.5px]"></div>
                             <div class="line2 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 -rotate-45 translate-x-[5.5px]"></div>
                         </div>
@@ -521,10 +511,10 @@
                 </div>
 
                 <!-- FAQ Item2 -->
-                <div class="border-b border-gray-700 pb-3">
+                <div class="border-b border-gray-700 pb-4">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(this)">
                         <h2 class="text-sm sm:text-lg md:text-xl font-medium text-gray-200">How can I get in touch?</h2>
-                        <div class="relative w-5 h-5 px-7">
+                        <div class="relative w-5 h-5 px-7 translate-y-[10px]">
                             <div class="line1 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 rotate-45 -translate-x-[5.5px]"></div>
                             <div class="line2 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 -rotate-45 translate-x-[5.5px]"></div>
                         </div>
@@ -535,10 +525,10 @@
                 </div>
 
                 <!-- FAQ Item3 -->
-                <div class="border-b border-gray-700 pb-3">
+                <div class="border-b border-gray-700 pb-4">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(this)">
                         <h2 class="text-sm sm:text-lg md:text-xl font-medium text-gray-200">Does my business need to be successful first?</h2>
-                        <div class="relative w-5 h-5 px-7">
+                        <div class="relative w-5 h-5 px-7 translate-y-[10px]">
                             <div class="line1 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 rotate-45 -translate-x-[5.5px]"></div>
                             <div class="line2 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 -rotate-45 translate-x-[5.5px]"></div>
                         </div>
@@ -552,7 +542,7 @@
                 <div class="border-b border-gray-700 pb-3">
                     <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(this)">
                         <h2 class="text-sm sm:text-lg md:text-xl font-medium text-gray-200">What can I expect from your websites?</h2>
-                        <div class="relative w-5 h-5 px-7">
+                        <div class="relative w-5 h-5 px-7 translate-y-[10px]">
                             <div class="line1 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 rotate-45 -translate-x-[5.5px]"></div>
                             <div class="line2 absolute w-4 h-0.5 bg-white rounded-[1px] transition-transform duration-300 -rotate-45 translate-x-[5.5px]"></div>
                         </div>
@@ -646,7 +636,7 @@
   <div class="mobile-container w-full max-w-5xl flex flex-col md:flex-row gap-6">
     
     <!-- Contact Info -->
-    <div class="bg-gray-950 border border-gray-700 rounded-xl p-6 md:w-1/3 shadow-lg relative overflow-hidden mobile-container">
+    <div class="bg-gray-950 border border-gray-700 rounded-xl p-8 md:w-1/3 shadow-lg relative overflow-hidden mobile-container">
       <div class="purple-glow"></div>
       <div class="purple-glow" style="top: auto; right: auto; bottom: -50px; left: -50px;"></div>
       <div class="relative z-10">
@@ -688,7 +678,7 @@
     </div>
     
     <!-- Contact Form -->
-    <div class="bg-gray-950 border border-gray-700 rounded-xl p-6 md:w-2/3 shadow-lg mobile-container">
+    <div class="bg-gray-950 border border-gray-700 rounded-xl p-8 md:w-2/3 shadow-lg mobile-container">
       <h3 class="text-lg sm:text-xl md:text-2xl font-medium text-white section-title">Send Us a Message</h3>
       <form id="contactForm" class="space-y-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
