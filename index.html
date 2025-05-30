@@ -12,6 +12,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
     /* Body */
+html{
+  scroll-behavior: smooth;
+}
+
 .grid-background {
     position: absolute;
     top: 0;
@@ -19,12 +23,11 @@
     width: 100%;
     height: 100%;
     background-image: 
-    linear-gradient(rgba(37, 36, 36, 0.623) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 36, 36, 0.623) 1px, transparent 1px);
+    linear-gradient(rgba(47, 112, 51, 0.623) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 112, 51, 0.623) 1px, transparent 1px);
     background-size: 80px 80px;
     opacity: 0.3;
     z-index: -1;
-   
 }
 ::selection {
     background-color: var(--color-green-950);
@@ -242,14 +245,14 @@
     <div class="z-[1000] flex flex-row"><img class="mb-1 mr-[10.63px] h-9 w-auto" src="logotransparent.png" alt=""><h1 class="flex items-center text-lg font-semibold text-[#549B54]"><span class="text-white">Web-</span>plants</h1></div>
 
     <ul class="nav-links flex md:opacity-100 md:visible md:flex-row md:w-auto md:relative md:top-0 md:left-auto opacity-0 invisible flex-col w-full absolute top-[40px] left-0 bg-gray-800 md:bg-transparent rounded-b-2xl md:p-0 z-500 gap-x-5 lg:gap-x-10 2xl:gap-x-16 gap-y-1.5 text-white text-lg font-medium transition-all duration-500">
-        <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Home</a></li>
-        <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">About</a></li>
-        <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Services</a></li>
-        <li><a href="#" class="hover:text-green-600 transition ml-8 md:ml-0">Contact</a></li>
+        <li><a href="#hero" class="hover:text-green-600 transition ml-8 md:ml-0">Home</a></li>
+        <li><a href="#about" class="hover:text-green-600 transition ml-8 md:ml-0">About</a></li>
+        <li><a href="#service" class="hover:text-green-600 transition ml-8 md:ml-0">Services</a></li>
+        <li><a href="#faq" class="hover:text-green-600 transition ml-8 md:ml-0">Questions</a></li>
         <li class="block md:hidden ml-6 mt-2 w-min min-w-34 text-white bg-green-600 hover:bg-green-700 font-medium px-4 py-2 rounded-xl transition">Get in Touch</li>
     </ul>
 
-    <button class="hidden md:block text-white bg-green-600 hover:bg-green-700 font-medium px-4 py-2 rounded-xl transition">Get in Touch</button>
+    <button class="hidden md:block text-white cursor-pointer bg-green-600 hover:bg-green-700 font-medium px-4 py-2 rounded-xl transition"><a href="#contact">Get in Touch</a></button>
 
     <div class="nav-hamburger md:hidden flex flex-col cursor-pointer w-[32px] h-[25px] justify-between transition-all duration-300 z-1000" onclick="toggleMenu()">
       <div class="nav-bar bg-white w-[32px] h-[3px] transition-all duration-300 rounded-[1px]"></div>
@@ -259,10 +262,8 @@
 </nav>
 
     <!-- Hero -->
-<section class="relative h-screen w-full overflow-hidden">
-        <!-- Dual Gradient Background -->
+<section id="hero" class="relative h-screen w-full overflow-hidden">
 
-        
         <!-- Content -->
         <div class="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8">
             <h1 class=" text-4xl sm:text-5xl md:text-6xl lg:7xl  font-bold text-white text-center mb-4 md:mb-6">
@@ -278,11 +279,11 @@
             </h4>
             
             <div class="flex flex-col sm:flex-row gap-4 mb-8">
-               <button class="btn-gradient text-white text-sm sm:text-base md:text-lg font-semibold py-3 px-6 rounded-xl w-min min-w-[180px] transition-all duration-300 hover:scale-105">
-                    Contact Us →
+               <button class="btn-gradient cursor-pointer text-white text-sm sm:text-base md:text-lg font-semibold py-3 px-6 rounded-xl w-min min-w-[180px] transition-all duration-300 hover:scale-105">
+                    <a href="#contact">Contact Us →</a>
                 </button>
-                <button class="bg-transparent text-white text-sm sm:text-base md:text-lg font-semibold py-3 px-6 rounded-xl w-min min-w-[230px] border-2 border-gray-700 hover:border-green-500 transition-all duration-300 hover:bg-green-500/10 hover:scale-105">
-                    Learn About Us
+                <button class="bg-transparent cursor-pointer text-white text-sm sm:text-base md:text-lg font-semibold py-3 px-6 rounded-xl w-min min-w-[230px] border-2 border-gray-700 hover:border-green-500 transition-all duration-300 hover:bg-green-500/10 hover:scale-105">
+                    <a href="#team">Learn About Us</a>
                 </button>
             </div>
         </div>
@@ -294,9 +295,9 @@
     </section> 
 
     <!--  Editor  -->
-  <div class="leading-relaxed">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <section class="py-12 md:py-24 flex flex-col items-center">
+  <section id="about">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 leading-relaxed">
+        <div class="py-12 md:py-24 flex flex-col items-center">
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-white text-center">About Us</h1>
             <div class="h-1 w-20 md:w-20 rounded-[1px] bg-green-600"></div>
 
@@ -334,12 +335,12 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-  </div>
+  </section>
 
     <!-- Service -->
-<section class="py-20">
+<section id="service" class="py-20">
     <div class="max-w-10xl mx-auto px-4">
         <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 text-white relative">
             Why Our Service is
@@ -385,7 +386,7 @@
 
 
     <!-- Team -->
-<section class="py-24 relative overflow-hidden">
+<section id="team" class="py-24 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <!-- Header -->
             <div class="text-center mb-16">
@@ -401,10 +402,10 @@
             <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row items-center gap-4 justify-center mb-20">
                 <button class="btn-gradient text-white text-sm sm:text-base md:text-lg font-semibold py-3 px-6 rounded-xl w-min min-w-[180px] transition-all duration-300 hover:scale-105">
-                    Get In Touch →
+                    <a href="#contact">Get in Touch →</a> 
                 </button>
                 <button class="bg-transparent text-white text-sm sm:text-base md:text-lg font-semibold py-3 px-6 rounded-xl w-min min-w-[230px] border-2 border-gray-700 hover:border-green-500 transition-all duration-300 hover:bg-green-500/10 hover:scale-105">
-                    Learn More About Us
+                    <a href="#timeline">Learn More About Us</a> 
                 </button>
             </div>
             
@@ -483,14 +484,14 @@
             <div class="text-center mt-16">
                 <p class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-400 mb-6">Ready for your next project?</p>
                 <button class="btn-gradient text-white text-sm sm:text-base md:text-lg font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105">
-                    Let's Talk
+                    <a href="#contact">Let's Talk</a>
                 </button>
             </div>
         </div>
     </section>
 
 <!-- Faq -->
-<section class="flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0 py-24 max-w-6xl mx-auto">
+<section id="faq" class="flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0 py-24 max-w-6xl mx-auto">
         <div class="w-full lg:w-4/5">
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
                 The Questions We Get <span class="text-green-600">Asked</span>
@@ -629,7 +630,7 @@
 
 
   <!-- Contact -->
-<div class="min-h-screen flex flex-col items-center justify-center p-4 mobile-section">
+<section id="contact" class="min-h-screen flex flex-col items-center justify-center p-4 mobile-section">
   <div class="text-center mb-8">
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">Get in Touch</h2>
     <div class="mx-auto mt-2 h-1 w-24 bg-gradient-to-r rounded-[1px] from-green-600 to-green-700"></div>
@@ -732,7 +733,7 @@
       </form>
     </div>
   </div>
-</div>  
+</section>  
 
     <!-- Footer -->
 <footer class="bg-[#0c0c0c] text-white px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-16 2xl:py-16 grid gap-8 justify-items-center text-center">
@@ -753,8 +754,8 @@
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 text-sm sm:text-base md:text-lg leading-relaxed">
-      <a href="#" class="hover:text-green-600">Latest Updates</a>
-      <a href="#" class="hover:text-green-600">Meet the Team</a>
+      <a href="#timeline" class="hover:text-green-600">Our Story</a>
+      <a href="#team" class="hover:text-green-600">Meet the Team</a>
       <a href="#" class="hover:text-green-600">Impressum</a>
       <a href="#" class="hover:text-green-600">Datenschutzerklärung</a>
     </div>
