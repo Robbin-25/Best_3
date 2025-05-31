@@ -836,6 +836,17 @@ function toggleMenu() {
     overlayNav.classList.toggle('overlay-active');
     body.classList.toggle('no-scroll', isActive);
 }
+    
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+        overlayNav.classList.remove('overlay-active');
+        body.classList.remove('no-scroll');
+      }
+    });
+  });
 
 // Overlay Klick schließt Menü (Bonus)
 overlayNav.addEventListener('click', () => {
