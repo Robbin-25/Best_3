@@ -1050,6 +1050,11 @@ window.addEventListener('scroll', () => {
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+     var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if(isDarkMode){
+        document.write(`<meta name="color-scheme" content="dark Only"><\/meta>`);
+      }
 </script>
 
 </body>
